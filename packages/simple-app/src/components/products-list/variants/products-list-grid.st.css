@@ -1,0 +1,27 @@
+:import {
+  -st-from: "../../../common/project.st.css";
+  -st-named: mobile;
+}
+
+:import {
+  -st-from: "../products-list.st.css";
+  -st-default: ProductsList;
+}
+
+.productGrid {
+  -st-extends: ProductsList;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+}
+
+@media value(mobile) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+
+  .root> :not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

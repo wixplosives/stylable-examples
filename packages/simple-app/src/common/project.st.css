@@ -1,0 +1,50 @@
+@namespace "Project";
+
+/* simple reset */
+:global(html), :global(body) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:global(*), :global(*:before), :global(*:after) {
+  box-sizing: inherit;
+}
+
+:global(button) {
+    background: transparent;
+    border: 0;
+}
+
+:vars {
+    mobile: "only screen and (max-width: 750px)";
+    desktop: "only screen and (min-width: 750px)";
+}
+
+.root {
+    --color-bg: #fff;
+    --color-primary: #fff;
+    --color-primary-contrast: rgba(0,0,0,1);
+
+    --overlay-color-1: rgba(0,0,0,0.07);
+    --overlay-color-8: rgba(0,0,0,0.8);
+
+    --unit-m: 7px;
+    --unit-l: 10px;
+    --unit-xl: 10px;
+    --unit-xxl: 20px;
+
+    --pad-s: 1.5rem;
+    --pad-m: 3rem;
+    --pad-l: 5rem;
+
+    --font-family-primary: Caudex, serif;
+    --font-family-secondary: Prompt, sans-serif; 
+
+    --font-xs: 10px;
+    --font-s: 12px;
+    --font-m: 14px;
+    --font-l: 16px;
+    --font-xl: 18px;
+    --font-xxl: 24px;
+}

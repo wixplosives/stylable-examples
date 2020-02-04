@@ -1,0 +1,40 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named:
+        --unit-l,
+        --color-primary-contrast,
+        --font-family-primary;
+}
+
+.root {
+    font-family: var(--font-family-primary);
+    display: flex;
+}
+
+.separator {
+    margin: 0 var(--unit-l);
+    color: var(--color-primary-contrast);
+    opacity: 0.8;
+}
+
+.breadCrumbItem {
+    -st-states: isCurrent;
+    opacity: 0.8;
+    font-weight: 300;
+    color: var(--color-primary-contrast);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.breadCrumbItem:isCurrent {
+    color: var(--color-primary-contrast);
+    font-weight: bold;
+}
+
+.breadCrumbItem:not(:isCurrent):hover {
+    color: var(--color-primary-contrast);
+    border-bottom: 1px solid var(--color-primary-contrast);
+}

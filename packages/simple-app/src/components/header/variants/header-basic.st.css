@@ -1,0 +1,84 @@
+:import {
+    -st-from: "../../../common/project.st.css";
+    -st-named:
+        mobile,
+        desktop,
+        --font-family-primary,
+        --color-primary-contrast,
+        --unit-xxl,
+        --unit-l,
+        --pad-s,
+        --pad-m,
+        --font-m;
+}
+
+:import {
+    -st-from: "../header.st.css";
+    -st-default: Header;
+}
+
+.header {
+    -st-extends: Header;
+    color: var(--color-primary-contrast);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header::user {
+    display: flex;
+    align-items: center;
+}
+
+.header::menuButtonBar {
+    width: 27px;
+    height: 2px;
+    background: var(--color-primary-contrast);
+}
+
+.header::menuButtonBar:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.header::userStatus {
+    color: inherit;
+}
+
+.header::logo {
+    font-family: var(--font-family-primary);
+}
+
+@media value(mobile) {
+
+    .header {
+        padding: var(--unit-xxl) var(--pad-s);
+    }
+
+    .header::logo {
+        display: flex;
+        flex-flow: column;
+        font-size: var(--font-m);
+    }
+
+    .header::logo::title {
+        margin-top: 7px;
+    }
+
+}
+
+@media value(desktop) {
+
+    .header {
+        padding: 25px var(--pad-m);
+    }
+
+    .header::logo::title {
+        font-size: var(--font-l);
+        margin-left: var(--unit-l);
+    }
+
+    .header::shoppingCart {
+        margin-right: 1rem;
+    }
+
+}

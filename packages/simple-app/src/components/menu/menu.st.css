@@ -1,0 +1,42 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: --color-primary-contrast;
+}
+
+.root {
+    -st-states: layout(enum(horizontal, vertical));
+    font-family: Prompt, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    display: flex;
+
+}
+
+.root:layout(vertical) {
+    flex-direction: column;
+}
+
+.root:layout(horizontal) > :not(:last-child) {
+    margin-right: 3rem;
+}
+
+.root:layout(vertical) > :not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.menuItem {
+    line-height: 28px;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--color-primary-contrast);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.menuItem:hover {
+    border-bottom: 1px solid var(--color-primary-contrast);
+}

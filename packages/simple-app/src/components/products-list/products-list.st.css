@@ -1,0 +1,10 @@
+:import {
+  -st-from: "../product-item/product-item.st.css";
+  -st-default: ProductItem;
+}
+
+.root {}
+
+.productItem {
+  -st-extends: ProductItem;
+}

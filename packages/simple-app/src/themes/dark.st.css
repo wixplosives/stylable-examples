@@ -1,0 +1,59 @@
+:import {
+    -st-from: "../common/project.st.css";
+    -st-named: 
+        --color-bg,
+        --color-primary,
+        --color-primary-contrast,
+        --overlay-color-1,
+        --overlay-color-8,
+    
+        --unit-m,
+        --unit-l,
+        --unit-xl,
+        --unit-xxl,
+
+        --pad-s,
+        --pad-m,
+        --pad-l,
+
+        --font-family-primary,
+
+        --font-family-secondary,
+        --font-xs,
+        --font-s,
+        --font-m,
+        --font-l,
+        --font-xl,
+        --font-xxl
+}
+
+:import {
+    -st-from: "../components/products-collection-page/products-collection-page.st.css";
+    -st-default: ProductPage;
+}
+
+.root {
+    --color-bg: rgb(19, 23, 29);
+    --color-primary: rgb(9, 7, 24);
+    --color-primary-contrast: rgba(196, 187, 184, 1);
+    --overlay-color-1: rgba(0, 0, 0, 0.07);
+    --overlay-color-8: rgba(0, 0, 0, 0.8);
+
+    --unit-m: 7px;
+    --unit-l: 10px;
+    --unit-xl: 10px;
+    --unit-xxl: 20px;
+
+    --pad-s: 1.5rem;
+    --pad-m: 3rem;
+    --pad-l: 5rem;
+
+    --font-family-primary: Caudex, serif;
+    --font-family-secondary: Prompt, sans-serif; 
+    --font-xs: 10px;
+    --font-s: 12px;
+    --font-m: 14px;
+    --font-l: 16px;
+    --font-xl: 18px;
+    --font-xxl: 24px;
+}

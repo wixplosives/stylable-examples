@@ -1,0 +1,36 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: 
+        --overlay-color-1,
+        --color-primary-contrast;
+}
+
+.root {
+    font-family: 'Prompt', sans-serif;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.root:hover .shape {
+    fill:var(--overlay-color-1);
+}
+
+.shape {
+    transition: all 0.2s;
+    fill: transparent;
+    stroke: var(--color-primary-contrast);
+}
+
+.itemsCount {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -3px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+}

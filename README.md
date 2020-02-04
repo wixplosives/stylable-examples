@@ -1,102 +1,219 @@
-# sample-monorepo
-[![Build Status](https://github.com/wixplosives/sample-monorepo/workflows/tests/badge.svg)](https://github.com/wixplosives/sample-monorepo/actions)
+# Introduction to theming
 
-Sample monorepo setup with yarn workspaces, typescript, and lerna.
+- theming is a range
+  - theme complexity / granularity
+  - theme scope
+- single vs. multiple components
+  > modern browsers
 
-## Setup explained
+## Purpose of a theme
 
-### Tooling
+- Code organization
+- reusability
+- multiple looks
+- visual consistency / visual constraints
 
--   Monorepo is installed using [yarn](https://github.com/yarnpkg/yarn).
+### Theming in css
 
-    -   Packages are automatically linked together, meaning you can do cross-package work within the repo.
-    -   `devDependencies` are common, and only appear in the root `package.json`. Easier to manage and upgrade.
-    -   Each package has its own `scripts` and `dependencies`. They are being installed in the root `node_modules`, using the same deduping mechanism `yarn` uses for single packages.
-    -   Adding new packages is as simple as dropping an existing package in the `packages` folder, and re-running `yarn`.
+- specificity override
+- vars override/reuse
+  - static
+  - dynamic
 
--   Monorepo scripts are being executed using [lerna](https://github.com/lerna/lerna).
+## Example theme setups
 
-    -   `lerna publish` - multi-package publishing.
-    -   `lerna run` - running package scripts.
-    -   `lerna updated` - shows changed packages (since last tag).
+### CSS implementation
 
--   Sources and tests are written in strict [TypeScript](https://github.com/Microsoft/TypeScript).
+- very easy to start
 
-    -   Common base `tsconfig.json`.
-    -   [@ts-tools/node](https://github.com/AviVahl/ts-tools) is used to run code directly from sources.
+- no special treatments for components
+- hard to scale
 
--   Testing is done using [mocha](https://github.com/mochajs/mocha) and [chai](https://github.com/chaijs/chai).
-    -   Light, battle-tested, projects with few dependencies.
-    -   Can be bundled and used in the browser.
+```css
+/* style.css */
 
-### Included sample packages
+/* css reset */
+body {
+  margin: 0;
+}
 
--   **@sample/components**
+/* defaults */
+body {
+  --color-primary: white;
+  --color-primary-contrast: black;
+  --border-primary: 1px solid var(--color-primary-contrast);
+  background: var(--color-primary);
+}
 
-    -   [React](https://github.com/facebook/react) components library.
-    -   Built as `cjs` (Node consumption) and `esm` (bundler consumption).
+/* design */
+.button {
+  border: var(--border-primary);
+  color: var(--color-primary-contrast);
+  background: var(--color-primary);
+}
 
--   **@sample/app**
-
-    -   [React](https://github.com/facebook/react) application.
-    -   Uses the `@sample/components` package (also inside monorepo).
-    -   Built as `cjs` (Node consumption) and `umd` (browser consumption).
-
--   **@sample/server**
-    -   [Express](https://github.com/expressjs/express) application.
-    -   Uses the `@sample/app` package (also inside monorepo).
-    -   Listens on http://localhost:3000 (client only rendering) http://localhost:3000/server (SSR rendering).
-    -   Built as `cjs` (Node consumption).
-
-### Basic structure and configurations
-
-```
-.github                  // CI flow configuration (GitHub Actions)
-packages/
-  some-package/
-    src/
-      index.ts
-    test/
-      test.spec.ts
-    LICENSE              // license file. included in npm artifact
-    package.json         // package-specific deps and scripts
-    README.md            // shown in npmjs.com. included in npm artifact
-    tsconfig.build.json  // config used to build for publishing
-
-.eslintignore            // eslint (linter) ignored directories/files
-.eslintrc                // eslint (linter) configuration
-.gitignore               // github's default node gitignore with customizations
-.mocharc.js              // mocha (test runner) configuration
-.prettierrc.js           // prettier (formatter) configuration
-lerna.json               // lerna configuration
-LICENSE                  // root license file. picked up by github
-package.json             // common dev deps and workspace-wide scripts
-README.md                // workspace-wide information. shown in github
-tsconfig.json            // common typescript configuration
-yarn.lock                // the only lock file in the repo. all packages combined
+.link {
+  color: var(--color-primary-contrast);
+}
 ```
 
-### Dependency management
-
-Traditionally, working with projects in separate repositories makes it difficult to keep versions of `devDependencies` aligned, as each project can specify its own `devDependency` versions.
-
-Monorepos simplify this, because `devDependencies` are shared between all packages within the monorepo.
-
-Taking this into account, we use the following dependency structure:
-
--   `devDependencies` are placed in the root `package.json`
--   `dependencies` and `peerDependencies` are placed in the `package.json` of the relevant package requiring them, as each package is published separately
-
-New `devDependencies` can be added to the root `package.json` using yarn:
-
-```sh
-yarn add <package name> --dev -W
+```css
+/* dark-theme.css */
+.dark-theme {
+  --color-primary: black;
+  --color-primary-contrast: white;
+}
 ```
 
-Some packages depend on sibling packages within the monorepo. For example, in this repo, `@sample/app` depends on `@sample/components`. This relationship is just a normal dependency, and can be described in the `package.json` of `app` like so:
-
-```json
-  "dependencies": {
-    "@sample/components": "<package version>"
-  }
+```html
+<!-- index.html -->
+<head>
+  <link src="style.css" />
+  <link src="theme.css" />
+</head>
+<body class="dark-theme">
+  <button class="button">Click Me</button>
+  <a class="link" href="#home">Home</a>
+</body>
 ```
+
+## Theming with Stylable
+
+### App by example
+#### disclaimer
+* not presenting theming ui design best practices
+* demo with simple implementations
+* demo with simple styles (only colors, not fonts, sizes, etc)
+#### Simple app
+
+- Only internal components.
+- Not generic.
+- Written for a specific purpose.
+- Component written with full default style
+
+
+```css
+/* project.st.css */
+.root {
+  --color-primary: white;
+  --color-primary-contrast: black;
+  --border-primary-contrast: 1px solid var(--color-primary-contrast);
+}
+```
+
+```css
+/* button.st.css */
+@st-import [
+    --color-primary,
+    --color-primary-contrast,
+    --border-primary-contrast
+] from "../project.st.css";
+
+.root {
+  border: var(--border-primary-contrast);
+  background: var(--color-primary);
+}
+.text {
+  color: var(--color-primary-contrast);
+}
+```
+
+```tsx
+/* button.jsx */
+import { st, classes } from "./button.st.css";
+export const Button = ({ text, className }) => (
+  <button className={st(classes.root, className)}>
+    <span className={classes.text}>{text}</span>
+  </button>
+);
+```
+
+```css
+/* link.st.css */
+@st-import [ --color-primary-contrast ] from "../project.st.css";
+
+.root {
+  color: var(--color-primary-contrast);
+}
+```
+
+```tsx
+/* link.jsx */
+import { st, classes } from "./link.st.css";
+export const Link = ({ href, text, className }) => (
+  <a className={st(classes.root, className)} href={href}>
+    {text}
+  </a>
+);
+```
+
+```tsx
+/* app.jsx */
+import { Button } from "./components/button";
+import { Link } from "./components/link";
+
+ReactDOM.render(
+    <div>
+       <Button text="Click Me"/>
+       <Link href="#Home" text="Home"/>
+    <div>,
+    document.body
+)
+```
+
+##### Adding a dark theme
+
+```css
+/* dark-theme.st.css */
+@st-import [ 
+  --color-primary,
+  --color-primary-contrast
+] from "../project.st.css";
+
+.root {
+  --color-primary: black;
+  --color-primary-contrast: white;
+}
+```
+
+```tsx
+/* app.jsx */
+import { Button } from "./components/button";
+import { Link } from "./components/link";
+import { classes as darkTheme } from "./themes/dark";
+
+document.body.classList.add(darkTheme.root);
+
+ReactDOM.render(
+    <div>
+       <Button text="Click Me"/>
+       <Link href="#Home" text="Home"/>
+    <div>,
+    document.body
+)
+```
+
+##### Organizing the app
+
+- extract commons
+  - vars
+  - variants
+  - utils
+
+#### App with secondary theme (dark)
+
+### Component library
+
+##### Expose a public API
+
+Q:
+
+index in themes?
+variants like xs xl...
+publishing and consumption
+
+Todo:
+
+- es6 import optional (pr with more work needed).
+- multiple compose (pr with more work needed).
+- fix optimize variants (pr with more work needed).

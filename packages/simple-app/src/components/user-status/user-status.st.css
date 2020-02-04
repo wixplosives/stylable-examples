@@ -1,0 +1,22 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: --font-family-secondary, --color-primary-contrast;
+}
+
+.root {
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    color: var(--color-primary-contrast);
+}
+
+.root:hover {
+    text-decoration: none;
+}

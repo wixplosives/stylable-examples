@@ -1,0 +1,7 @@
+.root {
+    --objectFit: none;
+    --objectPositionVertical: top;
+    --objectPositionHorizontal: left;
+    object-fit: var(--objectFit);
+    object-position: var(--objectPositionVertical) var(--objectPositionHorizontal);
+}

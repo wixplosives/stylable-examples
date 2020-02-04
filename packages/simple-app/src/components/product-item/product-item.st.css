@@ -1,0 +1,54 @@
+@namespace "ProductItem";
+
+:import {
+    -st-from: "../stars-rating/stars-rating.st.css";
+    -st-default: StarsRating;
+}
+
+:import {
+    -st-from: "../button/button.st.css";
+    -st-default: Button;
+}
+
+.root {
+    position: relative;
+}
+
+.sectionMain {
+    position: relative;
+}
+
+.imageLink {}
+
+.productImage {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.bannerNew {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 12px 24px;
+}
+
+.addToCartButton {
+    -st-extends: Button;
+    -st-states: isAddedToCart;
+}
+
+.productInfo {}
+
+.title {}
+
+.modelName {}
+
+.priceLabel {}
+
+.rating {}
+
+.starsRating {
+    -st-extends: StarsRating;
+}
+
+.reviewsCount {}

@@ -1,0 +1,65 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: --pad-s, --font-family-secondary, --color-primary, --color-primary-contrast,;
+
+}
+:import {
+    -st-from: "../menu/menu.st.css";
+    -st-default: AppMenu;
+}
+
+:import {
+    -st-from: "../user-status/user-status.st.css";
+    -st-default: UserStatus;
+}
+
+
+.root {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    font-size: 24px;
+    font-weight: 300;
+    font-family: var(--font-family-secondary);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+
+}
+
+.body {
+    display: flex;
+    flex-flow: column;
+}
+
+
+.appMenu {
+    -st-extends: AppMenu;
+    font-size: inherit;
+}
+
+.separator {
+    height: 1px;
+    background: rgba(0,0,0,0.3);
+    margin: 24px 0;
+}
+
+.userStatus {
+    -st-extends: UserStatus;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.closeButton {
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    left: 17px;
+}

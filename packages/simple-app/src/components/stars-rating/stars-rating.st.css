@@ -1,0 +1,16 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: --color-primary-contrast;
+}
+
+.root {}
+
+.star {
+    -st-states: isHighlighted;
+    color: var(--color-primary-contrast);
+    padding: 1px;
+}
+
+.star:not(:isHighlighted) {
+    opacity: 0.2;
+}

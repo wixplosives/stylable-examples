@@ -1,0 +1,176 @@
+:import {
+    -st-from: "../../../common/project.st.css";
+    -st-named: 
+        mobile, 
+        desktop, 
+        --color-primary, 
+        --unit-m,
+        --unit-l,
+        --font-xs,
+        --font-s,
+        --font-m,
+        --font-l,
+        --font-xl,
+        --font-xxl,
+        --unit-xxl,
+        --overlay-color-1,
+        --color-primary-contrast,
+        --font-family-primary,
+        --font-family-secondary;
+}
+
+:import {
+    -st-from: "../product-item.st.css";
+    -st-default: ProductItem;
+}
+
+.basic {   
+    -st-extends: ProductItem;
+    font-family: var(--font-family-secondary);
+}
+
+.basic::productImage {
+    transition: all 0.2s;
+}
+
+.basic::productImage:hover {
+    transform: scale(1.1);
+}
+
+.basic::bannerNew {
+    border-radius: 2px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    font-size: var(--font-s);
+    color: var(--color-primary);
+    background-color: var(--color-primary-contrast);
+}
+
+.basic::sectionMain {
+    padding: var(--unit-xxl);
+    background: var(--overlay-color-1);
+}
+
+.basic::addToCartButton {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    width: 100%;
+    font-size: var(--font-m);
+    color: var(--color-primary-contrast);
+    border: 1px solid var(--color-primary-contrast);
+}
+
+.basic::addToCartButton:hover {
+    background: var(--color-primary-contrast);
+    color: var(--color-primary);
+}
+
+.basic::addToCartButton:isAddedToCart {
+    border: 1px solid var(--color-primary-contrast);
+    background: var(--color-primary-contrast);
+    color: var(--color-primary);
+}
+
+.basic::addToCartButton:isAddedToCart:hover {
+    filter: contrast(0.4)
+}
+
+.basic::productInfo {
+    display: grid;
+    min-height: 124px;
+    
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+}
+
+.basic::title {
+    align-self: center;
+    font-size: var(--font-xxl);
+    transition: all 0.2s;
+    text-decoration: none;
+    font-family: var(--font-family-primary);
+    color: var(--color-primary-contrast);
+}
+
+
+.basic::modelName {
+    font-weight: 300;
+    color: var(--color-primary-contrast);
+}
+
+.basic::priceLabel {
+    align-self: center;
+    font-weight: 300;
+    color: var(--color-primary-contrast);
+    justify-self: end;
+}
+
+.basic::rating {
+    margin-top: 0.25rem;
+    justify-self: end;
+}
+
+.basic::starsRating {
+    font-size: var(--font-s);
+   
+}
+
+.basic::reviewsCount {
+    font-weight: 300;
+    color: var(--color-primary-contrast);
+    margin-top: var(--unit-m);
+}
+
+@media value(mobile) {
+        
+    .basic::modelName {
+        font-size: var(--font-m);
+    }
+
+    .basic::priceLabel {
+        font-size: var(--font-l);
+    }
+
+    .basic::reviewsCount {
+        font-size: var(--font-xs);
+    }
+
+    .basic::addToCartButton {
+        padding: 12px 0;
+    }
+
+    .basic::productImage {
+        height: 335px;
+    }
+
+}
+
+@media value(desktop) {
+
+    .basic::title:hover {
+        transform: skewX(-8deg);
+    }
+
+    .basic::modelName {
+        font-size: var(--font-l);
+    }
+
+    .basic::priceLabel {
+        font-size: var(--font-xl);
+    }
+
+    .basic::reviewsCount {
+        font-size: var(--font-s);
+    }
+
+    .basic::addToCartButton {
+        padding: 15px 0;
+    }
+
+    .basic::productImage {
+        height: 410px;
+    }
+}

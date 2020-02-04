@@ -1,0 +1,78 @@
+@namespace "ProductPage";
+
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named: mobile, 
+               desktop, 
+               --color-bg,
+               --color-primary, 
+               --overlay-color-1,
+               --font-s, 
+               --font-m,
+               --pad-s,
+               --pad-l;
+}
+
+:import {
+  -st-from: "../header/header.st.css";
+  -st-default: Header;
+}
+
+:import {
+  -st-from: "../bread-crumbs/bread-crumbs.st.css";
+  -st-default: BreadCrumbs;
+}
+
+:import {
+  -st-from: "../products-list/products-list.st.css";
+  -st-default: ProductList;
+}
+
+.root {
+  background: var(--color-bg);
+}
+ 
+ 
+.header {
+  -st-extends: Header;  
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--overlay-color-1);
+  background: var(--color-primary);
+
+}
+
+.breadCrumbs {
+  -st-extends: BreadCrumbs;
+}
+
+.productList {
+  -st-extends: ProductList;
+}
+
+@media value(mobile) {
+
+  .pageBody {
+    padding: 30px var(--pad-s);
+  }
+
+  .breadCrumbs {
+    margin-bottom: 20px;
+    font-size: var(--font-s);
+  }
+  
+}
+
+@media value(desktop) {
+
+  .pageBody {
+    padding: 60px var(--pad-l);
+  }
+
+  .breadCrumbs {
+    margin-bottom: 40px;
+    font-size: var(--font-m);
+  }
+
+}

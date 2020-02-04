@@ -1,0 +1,48 @@
+:import {
+    -st-from: "../common/project.st.css";
+    -st-default: Project;
+}
+
+
+:import {
+    -st-from: "../components/product-item/variants/product-item-basic.st.css";
+    -st-named: basic;
+}
+
+:import {
+    -st-from: "../components/product-item/product-item.st.css";
+    -st-default: ProductItem;
+}
+
+:import {
+    -st-from: "../components/header/variants/header-basic.st.css";
+    -st-named: header;
+}
+
+:import {
+    -st-from: "../components/header/header.st.css";
+    -st-default: Header;
+}
+
+:import {
+    -st-from: "../components/products-list/products-list.st.css";
+    -st-default: ProductsList;
+}
+
+:import {
+    -st-from: "../components/products-list/variants/products-list-grid.st.css";
+    -st-named: productGrid;
+}
+
+
+.root ProductItem {
+    -st-mixin: basic;
+}
+
+.root Header {
+    -st-mixin: header;
+}
+
+.root ProductsList {
+    -st-mixin: productGrid;
+}
