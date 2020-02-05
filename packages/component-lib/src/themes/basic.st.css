@@ -1,0 +1,74 @@
+:import {
+    -st-from: "../common/project.st.css";
+    -st-named:
+        --border-primary-contrast-1,
+        --color-primary-main,
+        --color-primary-dark,
+        --color-primary-contrast,
+        --color-secondary-main,
+        --color-secondary-dark,
+        --color-secondary-contrast,
+        --color-success-main,
+        --color-success-dark,
+        --color-success-contrast;
+}
+
+:import {
+    -st-from: "../components/button/button.st.css";
+    -st-default: Button;
+}
+
+:import {
+    -st-from: "../components/button/variants.st.css";
+    -st-named: cancelButton, okButton;
+}
+
+:import {
+    -st-from: "../components/card/card.st.css";
+    -st-default: Card;
+}
+
+
+:import {
+    -st-from: "../components/image-view/image-view.st.css";
+    -st-default: ImageView;
+}
+
+:import {
+    -st-from: "../components/menu/menu.st.css";
+    -st-default: Menu;
+}
+
+.root {
+    --color-primary-main: #1976d2;
+    --color-primary-dark: #115293;
+    --color-primary-contrast: white;
+    --border-primary-contrast-1: 1px solid white;
+
+    --color-secondary-dark: #9a0036;
+    --color-secondary-main: #dc004e;
+    --color-secondary-light: #e33371;
+    --color-secondary-contrast: white;
+
+    --color-success-dark: #388e3c;
+    --color-success-main: #4caf50;
+    --color-success-light: #81c784;
+    --color-success-contrast: white;
+}
+
+.root Button {
+    padding: 12px;
+}
+
+.root .cancelButton {
+    --color-secondary-dark: gold;
+    --color-secondary-main: orange;
+}
+
+.root .okButton {}
+
+.root Card {}
+
+.root ImageView {}
+
+.root Menu {}

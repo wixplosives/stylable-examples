@@ -1,0 +1,46 @@
+@namespace "Project";
+
+/* simple reset */
+:global(html), :global(body) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:global(*), :global(*:before), :global(*:after) {
+  box-sizing: inherit;
+  color: inherit;
+}
+
+:global(button) {
+    background: transparent;
+    border: 0;
+}
+
+:vars {
+    mobile: "only screen and (max-width: 750px)";
+    desktop: "only screen and (min-width: 750px)";
+}
+
+.root {
+    /* colors */
+    --color-primary-dark: #fff;
+    --color-primary-main: #fff;
+    --color-primary-light: #fff;
+    --color-primary-contrast: #000;
+    
+    --color-secondary-dark: #fff;
+    --color-secondary-main: #fff;
+    --color-secondary-light: #fff;
+    --color-secondary-contrast: #000;
+    
+    --color-success-dark: #fff;
+    --color-success-main: #fff;
+    --color-success-light: #fff;
+    --color-success-contrast: #000;
+
+    /* borders */
+    --border-primary-contrast-1: 1px solid var(--color-primary-contrast);
+    --border-secondary-contrast-1: 1px solid var(--color-secondary-contrast);
+ 
+}

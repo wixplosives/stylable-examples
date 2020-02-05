@@ -1,0 +1,39 @@
+@namespace "Button";
+
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named:
+        --color-primary-main,
+        --color-primary-dark,
+        --color-primary-contrast, 
+        --border-primary-contrast-1;
+}
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    /* local style variant properties */ 
+    --bg-color: var(--color-primary-main);
+    --bg-hover-color: var(--color-primary-dark);
+    --text-color: var(--color-primary-contrast);
+    --border: var(--border-primary-contrast-1);
+
+    background-color: var(--bg-color);
+    color: var(--text-color, inherit);
+    border: var(--border);
+}
+
+.root:hover {
+    background-color: var(--bg-hover-color);
+}
+
+.root:disabled {
+    pointer-events: none;
+    filter: saturate(15%) brightness(70%);
+    cursor: default;
+}
+
+.text {}

@@ -1,0 +1,39 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named:
+        --color-secondary-main,
+        --color-secondary-dark,
+        --color-secondary-contrast,
+        --border-secondary-contrast-1,
+        --color-success-main,
+        --color-success-dark,
+        --color-success-contrast;
+}
+
+:import {
+    -st-from: "./button.st.css";
+    -st-default: Button;
+    -st-named:
+        --bg-color,
+        --text-color,
+        --border,
+        --bg-hover-color;
+}
+
+.cancelButton {
+    -st-extends: Button;
+
+    --bg-color: var(--color-secondary-main);
+    --bg-hover-color: var(--color-secondary-dark);
+    --text-color: var(--color-secondary-contrast);
+    --border: var(--border-secondary-contrast-1);
+}
+
+.okButton {
+    -st-extends: Button;
+
+    --bg-color: var(--color-success-main);
+    --bg-hover-color: var(--color-success-dark);
+    --text-color: var(--color-success-contrast);
+    --border: var(--border-secondary-contrast-1);
+}
