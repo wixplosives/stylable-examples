@@ -1,6 +1,6 @@
 :import {
     -st-from: "../../common/project.st.css";
-    -st-named: 
+    -st-named:
         --overlay-color-1,
         --color-primary-contrast;
 }
@@ -14,7 +14,7 @@
 }
 
 .root:hover .shape {
-    fill:var(--overlay-color-1);
+    fill: var(--overlay-color-1);
 }
 
 .shape {

@@ -77,7 +77,7 @@
     -st-extends: ShoppingCart;
 }
 
-@media value(mobile) {    
+@media value(mobile) {
     .userStatus,
     .menu {
         display: none !important;

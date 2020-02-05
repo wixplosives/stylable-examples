@@ -1,9 +1,9 @@
 :import {
     -st-from: "../../../common/project.st.css";
     -st-named: 
-        mobile, 
-        desktop, 
-        --color-primary, 
+        mobile,
+        desktop,
+        --color-primary,
         --unit-m,
         --unit-l,
         --font-xs,
@@ -24,7 +24,7 @@
     -st-default: ProductItem;
 }
 
-.basic {   
+.basic {
     -st-extends: ProductItem;
     font-family: var(--font-family-secondary);
 }
@@ -81,7 +81,7 @@
 .basic::productInfo {
     display: grid;
     min-height: 124px;
-    
+
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr auto;
 }
@@ -115,7 +115,7 @@
 
 .basic::starsRating {
     font-size: var(--font-s);
-   
+
 }
 
 .basic::reviewsCount {
@@ -125,7 +125,7 @@
 }
 
 @media value(mobile) {
-        
+
     .basic::modelName {
         font-size: var(--font-m);
     }
