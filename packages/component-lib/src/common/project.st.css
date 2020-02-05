@@ -24,12 +24,12 @@
 
 .root {
     /* colors */
-    --color-primary-dark: #fff;
+    --color-primary-dark: #fafafa;
     --color-primary-main: #fff;
     --color-primary-light: #fff;
     --color-primary-contrast: #000;
     
-    --color-secondary-dark: #fff;
+    --color-secondary-dark: #f0f0f0;
     --color-secondary-main: #fff;
     --color-secondary-light: #fff;
     --color-secondary-contrast: #000;
