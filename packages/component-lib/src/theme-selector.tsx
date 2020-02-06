@@ -13,7 +13,7 @@ const themes = {
 
 export function changeTheme(name: keyof typeof themes) {
     if (themes[name]) {
-        localStorage.currentTheme = name;
+        localStorage.componentLibCurrentTheme = name;
         document.documentElement.className = themes[name].join(' ');
     }
 }

@@ -61,6 +61,10 @@ function ComponentsPlayground() {
                     <h4>Fill - 300x150</h4>
                     <ImageView src={'../assets/compass.jpg'} resizeMode={'fill'} width={300} height={150} />
                 </div>
+                <div style={{marginLeft: '20px'}}>
+                    <h4>Cover - 300x150</h4>
+                    <ImageView src={'../assets/compass.jpg'} resizeMode={'cover'} width={300} height={150} />
+                </div>
             </div>
             <h2>Menu</h2>
             <div className={demo.box}>

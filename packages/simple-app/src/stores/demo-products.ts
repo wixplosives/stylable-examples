@@ -1,56 +1,56 @@
 export const demoProducts = [
     {
         productId: 'a3Bc56',
-        imageUrl: '../../assets/film.png',
-        productTitle: 'Chronomaster Prime',
+        imageUrl: '../../assets/notebooks/banana-blue.png',
+        productTitle: 'BANANA RAMA',
         modelName: 'Full Open',
-        price: '$1349.00',
+        price: '$13.00',
         reviewsAverageRating: 4,
         reviewsCount: 22
     },
     {
-        productId: 'ds21asf',
-        imageUrl: '../../assets/shoe.png',
-        productTitle: 'Elite Lady',
-        modelName: '760c',
-        price: '$290.00',
+        productId: 'cddsw1',
+        imageUrl: '../../assets/notebooks/ferret.png',
+        productTitle: 'Ferrets!',
+        modelName: '21',
+        price: '$10.00',
         reviewsAverageRating: 4,
-        reviewsCount: 31
+        reviewsCount: 22
     },
     {
         productId: 'gdf21s',
-        imageUrl: '../../assets/film.png',
-        productTitle: 'Pilot',
-        modelName: 'Type 20 Ton Up',
-        price: '$1190.00',
+        imageUrl: '../../assets/notebooks/beach.png',
+        productTitle: 'Sun-tan',
+        modelName: 'Type 20',
+        price: '$19.00',
         reviewsAverageRating: 3.3,
         reviewsCount: 8,
         isNew: true
     },
     {
-        productId: 'cddsw1',
-        imageUrl: '../../assets/shoe.png',
-        productTitle: 'Defy El Primero',
-        modelName: '21',
-        price: '$1100.00',
+        productId: 'ds21asf',
+        imageUrl: '../../assets/notebooks/banana-red.png',
+        productTitle: 'BANANA RAMA',
+        modelName: 'Special red edition',
+        price: '$20.00',
         reviewsAverageRating: 4,
-        reviewsCount: 22
+        reviewsCount: 31
     },
     {
-        productId: '4a3sdf',
-        imageUrl: '../../assets/film.png',
-        productTitle: 'Chronomaster Prime',
-        modelName: 'Radar',
-        price: '$2290.00',
+        productId: 'grw2as',
+        imageUrl: '../../assets/notebooks/swimming.png',
+        productTitle: 'Taking a Swim',
+        modelName: 'Type Up',
+        price: '$9.00',
         reviewsAverageRating: 4,
         reviewsCount: 22
     },
     {
         productId: 'grw2as',
-        imageUrl: '../../assets/shoe.png',
-        productTitle: '50th El Primero',
-        modelName: 'Type 20 Ton Up',
-        price: '$690.00',
+        imageUrl: '../../assets/notebooks/tiger-lady.png',
+        productTitle: 'Tiger Lady',
+        modelName: 'Fresh Jungle Boogie',
+        price: '$60.00',
         reviewsAverageRating: 4,
         reviewsCount: 22
     }

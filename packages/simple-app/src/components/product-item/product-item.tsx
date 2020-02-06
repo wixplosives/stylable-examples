@@ -5,7 +5,7 @@ import { StarsRating } from '../stars-rating/stars-rating';
 import { ImageView } from '../image-view/image-view';
 import { CommonClasses } from '../../common/common-classes';
 
-export interface AppProductItemProps extends React.HTMLAttributes<any> {
+export interface AppProductItemProps extends React.HTMLAttributes<HTMLDivElement> {
     imageUrl: string;
     modelName?: string;
     productId: string;

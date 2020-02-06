@@ -11,7 +11,7 @@ const themes = {
 };
 
 export function changeTheme(name: keyof typeof themes) {
-    localStorage.currentTheme = name;
+    localStorage.simpleAppCurrentTheme = name;
     document.documentElement.className = themes[name].join(' ');
 }
 
