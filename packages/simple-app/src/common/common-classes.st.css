@@ -1,5 +1,9 @@
 @namespace "Utils";
 
+/* 
+    Define general purpose utility classes that can be composed and 
+    used in a variety of places without being locked down to a specific component
+ */
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;

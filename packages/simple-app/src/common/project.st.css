@@ -1,6 +1,8 @@
 @namespace "Project";
 
-/* simple reset */
+/* 
+    General purpose CSS reset
+ */
 :global(html), :global(body) {
     margin: 0;
     padding: 0;
@@ -16,31 +18,42 @@
     border: 0;
 }
 
+/* 
+    Defining media-query values to be used across the application
+ */
 :vars {
     mobile: "only screen and (max-width: 750px)";
     desktop: "only screen and (min-width: 750px)";
 }
 
+/* 
+    Defining the common CSS variables that will be used throughout the application
+    Components can use these variables to tie into the unified look and feel of the app. 
+    They can also define additional variables of their own if the use-case warrants it.
+
+    All values definied here contain the minimal design required for maintaing 
+    functionality in the application without applying a specific style.
+ */
 .root {
+    /* DEFAULT COLORS */
     --color-bg: #fff;
     --color-primary: #fff;
     --color-primary-contrast: rgba(0,0,0,1);
-
     --overlay-color-1: rgba(0,0,0,0.07);
     --overlay-color-8: rgba(0,0,0,0.8);
 
+    /* DEFAULT SIZES */
     --unit-m: 7px;
     --unit-l: 10px;
     --unit-xl: 10px;
     --unit-xxl: 20px;
-
     --pad-s: 1.5rem;
     --pad-m: 3rem;
     --pad-l: 5rem;
 
+    /* DEFAULT TYPOGRAPHY */
     --font-family-primary: Caudex, serif;
     --font-family-secondary: Prompt, sans-serif; 
-
     --font-xs: 10px;
     --font-s: 12px;
     --font-m: 14px;

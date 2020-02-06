@@ -27,6 +27,10 @@
         --font-xxl
 }
 
+/* 
+    This theme overrides the css variables defined in the project.st.css file,
+    replacing the entire design of the application.
+ */
 .root {
     --color-bg: rgb(19, 23, 29);
     --color-primary: rgb(9, 7, 24);

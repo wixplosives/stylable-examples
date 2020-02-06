@@ -34,7 +34,9 @@
     -st-named: productGrid;
 }
 
-
+/* 
+    This theme customizes specific components by mixing in a designed varient of the component
+ */
 .root ProductItem {
     -st-mixin: basic;
 }

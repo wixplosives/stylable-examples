@@ -14,7 +14,7 @@ Despite the definition above, when discussing the matter of theming, it's import
 Theming components and applications can be done in a multitude of ways, according to different product requirements, runtime environments, platforms supported, resources available and many additional factors.
 
 Theming is also not a single desired fixed outcome with a clear meaning, but rather, a range of possible solutions offering various trade-offs.  
-Generally speaking the more customizable / themeable you want your project to be, the more wiring and internal dependencies are being created. Maintaining such complex styling structures can have a considerable development cost attributed to them, and should be considered in advance.
+Generally speaking the more customizable / theme-able you want your project to be, the more wiring and internal dependencies are being created. Maintaining such complex styling structures can have a considerable development cost attributed to them, and should be considered in advance.
 
 ## Running the projects
 Each project in the `packages` directory is a stand-alone project, with its demo page.
@@ -45,3 +45,6 @@ This projects demonstrates a way of creating a Stylable component library.
 - Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `project.st.css` file, creating a unified look for the library
 - All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one through a theme or override
 - The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use 
+
+## Issues not yet covered
+- 
