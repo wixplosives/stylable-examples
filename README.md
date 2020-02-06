@@ -1,6 +1,20 @@
-# Stylable examples
+# Stylable Examples
 
 This repo serves as a collection of use-case examples of how Stylable can be used in a variety of different situations.
+
+## What we talk about when we talk about theming
+Theming allows taking components or applications and quickly overriding or customizing them in order to create a new look or style without changing the internals.
+
+It is also about organizing your project in a way that is easy to maintain, less prone to style repetitions and with a consistent predictable way of interacting with the project's inner parts.
+
+### Disclaimer
+
+Despite the definition above, when discussing the matter of theming, it's important to remember that there is no single correct way of doing so.
+
+Theming components and applications can be done in a multitude of ways, according to different product requirements, runtime environments, platforms supported, resources available and many additional factors.
+
+Theming is also not a single desired fixed outcome with a clear meaning, but rather, a range of possible solutions offering various trade-offs.  
+Generally speaking the more customizable / themeable you want your project to be, the more wiring and internal dependencies are being created. Maintaining such complex styling structures can have a considerable development cost attributed to them, and should be considered in advance.
 
 ## Running the projects
 Each project in the `packages` directory is a stand-alone project, with its demo page.
