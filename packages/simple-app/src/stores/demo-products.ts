@@ -1,7 +1,7 @@
 export const demoProducts = [
     {
         productId: 'a3Bc56',
-        imageUrl: '',
+        imageUrl: '../../assets/film.png',
         productTitle: 'Chronomaster Prime',
         modelName: 'Full Open',
         price: '$1349.00',
@@ -10,7 +10,7 @@ export const demoProducts = [
     },
     {
         productId: 'ds21asf',
-        imageUrl: '',
+        imageUrl: '../../assets/shoe.png',
         productTitle: 'Elite Lady',
         modelName: '760c',
         price: '$290.00',
@@ -19,7 +19,7 @@ export const demoProducts = [
     },
     {
         productId: 'gdf21s',
-        imageUrl: '',
+        imageUrl: '../../assets/film.png',
         productTitle: 'Pilot',
         modelName: 'Type 20 Ton Up',
         price: '$1190.00',
@@ -29,7 +29,7 @@ export const demoProducts = [
     },
     {
         productId: 'cddsw1',
-        imageUrl: '',
+        imageUrl: '../../assets/shoe.png',
         productTitle: 'Defy El Primero',
         modelName: '21',
         price: '$1100.00',
@@ -38,7 +38,7 @@ export const demoProducts = [
     },
     {
         productId: '4a3sdf',
-        imageUrl: '',
+        imageUrl: '../../assets/film.png',
         productTitle: 'Chronomaster Prime',
         modelName: 'Radar',
         price: '$2290.00',
@@ -47,7 +47,7 @@ export const demoProducts = [
     },
     {
         productId: 'grw2as',
-        imageUrl: '',
+        imageUrl: '../../assets/shoe.png',
         productTitle: '50th El Primero',
         modelName: 'Type 20 Ton Up',
         price: '$690.00',
