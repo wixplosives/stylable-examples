@@ -27,11 +27,6 @@
         --font-xxl
 }
 
-:import {
-    -st-from: "../components/products-collection-page/products-collection-page.st.css";
-    -st-default: ProductPage;
-}
-
 .root {
     --color-bg: rgb(19, 23, 29);
     --color-primary: rgb(9, 7, 24);
