@@ -24,9 +24,7 @@ export const Menu = React.memo<MenuProps>(props => {
     });
 
     return (
-        <div
-            className={st(classes.root, { layout: layout === 'horizontal' ? 'horizontal' : 'vertical' }, className)}
-        >
+        <div className={st(classes.root, { layout: layout === 'horizontal' ? 'horizontal' : 'vertical' }, className)}>
             {menuItemsViews}
         </div>
     );

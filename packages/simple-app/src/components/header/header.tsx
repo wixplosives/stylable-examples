@@ -36,11 +36,7 @@ export const Header = React.memo<HeaderProps>(props => {
             </div>
             {menuIsShown &&
                 ReactDOM.createPortal(
-                    <MobileMenu
-                        className={classes.mobileMenu}
-                        menuItems={menuItems}
-                        onCloseButtonClick={hideMenu}
-                    />,
+                    <MobileMenu className={classes.mobileMenu} menuItems={menuItems} onCloseButtonClick={hideMenu} />,
                     document.body
                 )}
         </div>

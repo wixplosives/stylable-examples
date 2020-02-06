@@ -29,7 +29,11 @@ export function ThemeBar({ theme }: { theme: string }) {
                     changeTheme(e.target.value as keyof typeof themes)
                 }
             >
-                {Object.keys(themes).map((name)=><option key={name} value={name}>{name}</option>)}
+                {Object.keys(themes).map(name => (
+                    <option key={name} value={name}>
+                        {name}
+                    </option>
+                ))}
             </select>
         </div>
     );

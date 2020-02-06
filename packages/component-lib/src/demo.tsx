@@ -64,23 +64,17 @@ function ComponentsPlayground() {
             </div>
             <h2>Menu</h2>
             <div className={demo.box}>
-                <Menu
-                    menuItems={menuItems}
-                    layout="horizontal"
-                />
+                <Menu menuItems={menuItems} layout="horizontal" />
             </div>
             <br />
             <div className={demo.box}>
-                <Menu
-                    menuItems={menuItems}
-                    layout="vertical"
-                />
+                <Menu menuItems={menuItems} layout="vertical" />
             </div>
             <h2>Card</h2>
             <div className={demo.box}>
                 <Card>Hello World</Card>
             </div>
-            <br/>
+            <br />
             <div className={demo.box}>
                 <Card style={{ width: 300 }}>
                     <h4>Time is ticking</h4>

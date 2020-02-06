@@ -9,11 +9,9 @@ export interface UserInfo {
 export const LoggedInUserContext = React.createContext<UserInfo | null>(null);
 
 class UserStoreSingleton {
-    public getLoggedInUser () : UserInfo | null {
+    public getLoggedInUser(): UserInfo | null {
         return null;
     }
 }
 
 export const UserStore = new UserStoreSingleton();
-
-
