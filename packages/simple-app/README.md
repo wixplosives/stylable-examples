@@ -1,2 +1,3 @@
-# Simple example for an application
+# Simple Application - Example
 
+WIP

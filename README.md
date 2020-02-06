@@ -1,219 +1,33 @@
-# Introduction to theming
+# Stylable examples
 
-- theming is a range
-  - theme complexity / granularity
-  - theme scope
-- single vs. multiple components
-  > modern browsers
+This repo serves as a collection of use-case examples of how Stylable can be used in a variety of different situations.
 
-## Purpose of a theme
+## Running the projects
+Each project in the `packages` directory is a stand-alone project, with its demo page.
 
-- Code organization
-- reusability
-- multiple looks
-- visual consistency / visual constraints
+To run the projects locally:
 
-### Theming in css
+- Clone this repo
+- Run `yarn` in the repo root
+- Run `yarn start` in the desired project directory
+- Open `http://localhost:8080/` in your browser 
 
-- specificity override
-- vars override/reuse
-  - static
-  - dynamic
+## Example projects
 
-## Example theme setups
+### Simple App
+This project shows a simple e-commerce products page demo application.
 
-### CSS implementation
+#### Example highlights
+- A collection of components used together to build an application, with `products-collection-page` as its top level component
+- All components that are required for the application are written specifically for it and are not generic in nature
+- No 3rd-party components are used
+- The project uses CSS vars (custom properties) in its common definitions and throughout all of the components
+- The project includes multiple themes: `Basic`, `Dark` and `Gentle`. Achieved by overriding the project variables and specifically customizing pieces of UI to the desired result
 
-- very easy to start
+### Components Library
+This projects demonstrates a way of creating a Stylable component library.
 
-- no special treatments for components
-- hard to scale
-
-```css
-/* style.css */
-
-/* css reset */
-body {
-  margin: 0;
-}
-
-/* defaults */
-body {
-  --color-primary: white;
-  --color-primary-contrast: black;
-  --border-primary: 1px solid var(--color-primary-contrast);
-  background: var(--color-primary);
-}
-
-/* design */
-.button {
-  border: var(--border-primary);
-  color: var(--color-primary-contrast);
-  background: var(--color-primary);
-}
-
-.link {
-  color: var(--color-primary-contrast);
-}
-```
-
-```css
-/* dark-theme.css */
-.dark-theme {
-  --color-primary: black;
-  --color-primary-contrast: white;
-}
-```
-
-```html
-<!-- index.html -->
-<head>
-  <link src="style.css" />
-  <link src="theme.css" />
-</head>
-<body class="dark-theme">
-  <button class="button">Click Me</button>
-  <a class="link" href="#home">Home</a>
-</body>
-```
-
-## Theming with Stylable
-
-### App by example
-#### disclaimer
-* not presenting theming ui design best practices
-* demo with simple implementations
-* demo with simple styles (only colors, not fonts, sizes, etc)
-#### Simple app
-
-- Only internal components.
-- Not generic.
-- Written for a specific purpose.
-- Component written with full default style
-
-
-```css
-/* project.st.css */
-.root {
-  --color-primary: white;
-  --color-primary-contrast: black;
-  --border-primary-contrast: 1px solid var(--color-primary-contrast);
-}
-```
-
-```css
-/* button.st.css */
-@st-import [
-    --color-primary,
-    --color-primary-contrast,
-    --border-primary-contrast
-] from "../project.st.css";
-
-.root {
-  border: var(--border-primary-contrast);
-  background: var(--color-primary);
-}
-.text {
-  color: var(--color-primary-contrast);
-}
-```
-
-```tsx
-/* button.jsx */
-import { st, classes } from "./button.st.css";
-export const Button = ({ text, className }) => (
-  <button className={st(classes.root, className)}>
-    <span className={classes.text}>{text}</span>
-  </button>
-);
-```
-
-```css
-/* link.st.css */
-@st-import [ --color-primary-contrast ] from "../project.st.css";
-
-.root {
-  color: var(--color-primary-contrast);
-}
-```
-
-```tsx
-/* link.jsx */
-import { st, classes } from "./link.st.css";
-export const Link = ({ href, text, className }) => (
-  <a className={st(classes.root, className)} href={href}>
-    {text}
-  </a>
-);
-```
-
-```tsx
-/* app.jsx */
-import { Button } from "./components/button";
-import { Link } from "./components/link";
-
-ReactDOM.render(
-    <div>
-       <Button text="Click Me"/>
-       <Link href="#Home" text="Home"/>
-    <div>,
-    document.body
-)
-```
-
-##### Adding a dark theme
-
-```css
-/* dark-theme.st.css */
-@st-import [ 
-  --color-primary,
-  --color-primary-contrast
-] from "../project.st.css";
-
-.root {
-  --color-primary: black;
-  --color-primary-contrast: white;
-}
-```
-
-```tsx
-/* app.jsx */
-import { Button } from "./components/button";
-import { Link } from "./components/link";
-import { classes as darkTheme } from "./themes/dark";
-
-document.body.classList.add(darkTheme.root);
-
-ReactDOM.render(
-    <div>
-       <Button text="Click Me"/>
-       <Link href="#Home" text="Home"/>
-    <div>,
-    document.body
-)
-```
-
-##### Organizing the app
-
-- extract commons
-  - vars
-  - variants
-  - utils
-
-#### App with secondary theme (dark)
-
-### Component library
-
-##### Expose a public API
-
-Q:
-
-index in themes?
-variants like xs xl...
-publishing and consumption
-
-Todo:
-
-- es6 import optional (pr with more work needed).
-- multiple compose (pr with more work needed).
-- fix optimize variants (pr with more work needed).
+#### Example highlights
+- Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `project.st.css` file, creating a unified look for the library
+- All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one through a theme or override
+- The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use 

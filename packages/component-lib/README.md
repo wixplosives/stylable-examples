@@ -1,2 +1,3 @@
-# Simple example for a component library
+# Components Library - Example
 
+WIP
