@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         test: filePath =>
-          !/\.st\.css$/.test(filePath) && /\.css$/.test(filePath),
+          !filePath.endsWith(".st.css") && filePath.endsWith(".css"),
         use: ["css-loader"]
       }
     ]
