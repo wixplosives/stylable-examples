@@ -5,7 +5,9 @@ This repo serves as a collection of use-case examples of how Stylable can be use
 ## What we talk about when we talk about theming
 Theming allows taking components or applications and quickly overriding or customizing them in order to create a new look or style without changing the internals.
 
-It is also about organizing your project in a way that is easy to maintain, less prone to style repetitions and with a consistent predictable way of interacting with the project's inner parts.
+By creating even a single theme for your project, you enforce a certain degree of design consistency across your project. Ensuring that various parts of the UI work together well and adhere to the same aesthetic language. 
+
+Theming is also about organizing your project in a way that is easy to maintain, less prone to style repetitions and with a consistent predictable way of interacting with the project's inner parts.
 
 ### Disclaimer
 
@@ -13,7 +15,7 @@ Despite the definition above, when discussing the matter of theming, it's import
 
 Theming components and applications can be done in a multitude of ways, according to different product requirements, runtime environments, platforms supported, resources available and many additional factors.
 
-Theming is also not a single desired fixed outcome with a clear meaning, but rather, a range of possible solutions offering various trade-offs.  
+Theming is not a clearly defined term, but rather, a range of possible solutions offering various trade-offs.  
 Generally speaking the more customizable / theme-able you want your project to be, the more wiring and internal dependencies are being created. Maintaining such complex styling structures can have a considerable development cost attributed to them, and should be considered in advance.
 
 ## Running the projects
@@ -46,5 +48,9 @@ This projects demonstrates a way of creating a Stylable component library.
 - All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one through a theme or override
 - The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use 
 
-## Issues not yet covered
-- 
+## To Do!
+We intend on incrementally adding various use-cases and topics to demonstrate additional topics or problems.
+
+These are on our list to add:
+- publishing - how to publish various project types for consumption with and without Stylable
+- namespacing - advanced namespacing solutions for creating public APIs
