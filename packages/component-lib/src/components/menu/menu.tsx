@@ -15,19 +15,15 @@ export interface MenuProps {
 export const Menu = React.memo<MenuProps>(props => {
     const { menuItems = [], layout, className } = props;
 
-    const menuItemsViews = menuItems.map((menuItem, index) => {
-        return (
-            <a key={index} className={classes.menuItem} href={menuItem.url}>
-                {menuItem.title}
-            </a>
-        );
-    });
-
     return (
-        <div
-            className={st(classes.root, { layout: layout === 'horizontal' ? 'horizontal' : 'vertical' }, className)}
-        >
-            {menuItemsViews}
+        <div className={st(classes.root, { layout }, className)}>
+            {menuItems.map((menuItem, index) => {
+                return (
+                    <a key={index} className={classes.menuItem} href={menuItem.url}>
+                        {menuItem.title}
+                    </a>
+                );
+            })}
         </div>
     );
 });

@@ -71,6 +71,7 @@ function ComponentsPlayground() {
                     layout="horizontal"
                 />
             </div>
+            <br />
             <div className={demo.box}>
                 <Menu
                     menuItems={[
@@ -86,6 +87,14 @@ function ComponentsPlayground() {
             <div className={demo.box}>
                 <Card>Hello World</Card>
             </div>
+            <h2>Typography</h2>
+            <h1>Heading</h1>
+            <h2>Heading</h2>
+            <h3>Heading</h3>
+            <h4>Heading</h4>
+            <h5>Heading</h5>
+            <h6>Heading</h6>
+            <p>Paragraph</p>
         </div>
     );
 }
