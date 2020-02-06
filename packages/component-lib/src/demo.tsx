@@ -4,8 +4,6 @@ import React from 'react';
 import { ThemeBar, changeTheme } from './theme-selector';
 import { st, classes as demo } from './demo.st.css';
 
-// import { classes as project } from './common/project.st.css';
-
 import { Card } from './components/card/card';
 import { Button } from './components/button/button';
 import { classes as buttonVariants } from './components/button/variants.st.css';
@@ -18,6 +16,13 @@ changeTheme(theme);
 
 const root = document.createElement('div');
 document.body.appendChild(root);
+
+const menuItems = [
+    { title: 'Item A', url: '#' },
+    { title: 'Item B', url: '#' },
+    { title: 'Item C', url: '#' },
+    { title: 'Item D', url: '#' }
+];
 
 function ComponentsPlayground() {
     return (
@@ -49,35 +54,25 @@ function ComponentsPlayground() {
                     <ImageView src={'../assets/compass.jpg'} width={300} />
                 </div>
                 <div>
-                    <h4>Contain</h4>
+                    <h4>Contain - 300x100</h4>
                     <ImageView src={'../assets/compass.jpg'} resizeMode={'contain'} width={300} height={100} />
                 </div>
                 <div>
-                    <h4>Fill</h4>
+                    <h4>Fill - 300x150</h4>
                     <ImageView src={'../assets/compass.jpg'} resizeMode={'fill'} width={300} height={150} />
                 </div>
             </div>
             <h2>Menu</h2>
             <div className={demo.box}>
                 <Menu
-                    menuItems={[
-                        { title: 'Item A', url: '#' },
-                        { title: 'Item B', url: '#' },
-                        { title: 'Item C', url: '#' },
-                        { title: 'Item D', url: '#' }
-                    ]}
+                    menuItems={menuItems}
                     layout="horizontal"
                 />
             </div>
             <br />
             <div className={demo.box}>
                 <Menu
-                    menuItems={[
-                        { title: 'Item A', url: '#' },
-                        { title: 'Item B', url: '#' },
-                        { title: 'Item C', url: '#' },
-                        { title: 'Item D', url: '#' }
-                    ]}
+                    menuItems={menuItems}
                     layout="vertical"
                 />
             </div>
@@ -94,12 +89,12 @@ function ComponentsPlayground() {
                 </Card>
             </div>
             <h2>Typography</h2>
-            <h1>Heading</h1>
-            <h2>Heading</h2>
-            <h3>Heading</h3>
-            <h4>Heading</h4>
-            <h5>Heading</h5>
-            <h6>Heading</h6>
+            <h1>H1 Heading</h1>
+            <h2>H2 Heading</h2>
+            <h3>H3 Heading</h3>
+            <h4>H4 Heading</h4>
+            <h5>H5 Heading</h5>
+            <h6>H6 Heading</h6>
             <p>Paragraph</p>
         </div>
     );
