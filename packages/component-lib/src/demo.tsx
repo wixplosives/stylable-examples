@@ -24,12 +24,10 @@ function ComponentsPlayground() {
         <div className={demo.root}>
             <h1>Components Demo</h1>
             <h2>Button</h2>
-            <h3>Default button</h3>
+            <h4>Default</h4>
             <div className={demo.box}>
                 <Button text="Click Me" />
             </div>
-
-            <h3>States</h3>
             <h4>Disabled</h4>
             <div className={demo.box}>
                 <Button text="Click Me" disabled />
@@ -86,6 +84,14 @@ function ComponentsPlayground() {
             <h2>Card</h2>
             <div className={demo.box}>
                 <Card>Hello World</Card>
+            </div>
+            <br/>
+            <div className={demo.box}>
+                <Card style={{ width: 300 }}>
+                    <h4>Time is ticking</h4>
+                    <ImageView src={'../assets/compass.jpg'} />
+                    <p>There is no way we can find more time</p>
+                </Card>
             </div>
             <h2>Typography</h2>
             <h1>Heading</h1>

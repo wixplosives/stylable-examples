@@ -6,4 +6,5 @@
     --objectPositionHorizontal: left;
     object-fit: var(--objectFit);
     object-position: var(--objectPositionVertical) var(--objectPositionHorizontal);
+    max-width: 100%;
 }

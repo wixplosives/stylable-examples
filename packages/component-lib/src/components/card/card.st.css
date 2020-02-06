@@ -1,3 +1,14 @@
 @namespace "Card";
 
-.root {}
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-default: Project;
+    -st-named: --color-white, --shadow-1, --border-radius-1;
+}
+
+.root {
+    padding: 1rem;
+    background: var(--color-white);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--border-radius-1);
+}
