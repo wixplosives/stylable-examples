@@ -63,26 +63,28 @@
     --font-xxl: 24px;
 }
 
-/* 
-    Due to the color palette used in this theme additional component overrides 
-    were required in order to achieve the desired look.
- */
-.root ProductPage::pageBody {
-    --color-primary-contrast: rgb(255, 255, 255);
-}
+@st-scope .root {
+    /* 
+        Due to the color palette used in this theme additional component overrides 
+        were required in order to achieve the desired look.
+    */
+    ProductPage::pageBody {
+        --color-primary-contrast: rgb(255, 255, 255);
+    }
 
-/* 
-    Targetting specific instances of a component to 
-    make sure they match the rest of the design
- */
-.root ProductPage::productList::productItem::bannerNew {
-    --color-primary-contrast: rgb(70, 57, 57);
-}
+    /* 
+        Targetting specific instances of a component to 
+        make sure they match the rest of the design
+    */
+    ProductPage::productList::productItem::bannerNew {
+        --color-primary-contrast: rgb(70, 57, 57);
+    }
 
-.root ProductPage::productList::productItem::addToCartButton:hover {
-    color: rgb(70, 57, 57);
-}
+    ProductPage::productList::productItem::addToCartButton:hover {
+        color: rgb(70, 57, 57);
+    }
 
-.root ProductPage::productList::productItem::addToCartButton:isAddedToCart {
-    color: rgb(70, 57, 57);
+    ProductPage::productList::productItem::addToCartButton:isAddedToCart {
+        color: rgb(70, 57, 57);
+    }
 }

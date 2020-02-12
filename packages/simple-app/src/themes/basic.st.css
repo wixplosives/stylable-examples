@@ -34,17 +34,20 @@
     -st-named: productGrid;
 }
 
-/* 
-    This theme customizes specific components by mixing in a designed varient of the component
- */
-.root ProductItem {
-    -st-mixin: basic;
-}
 
-.root Header {
-    -st-mixin: header;
-}
+@st-scope .root {
+    /* 
+        This theme customizes specific components by mixing in a designed varient of the component
+    */
+    ProductItem {
+        -st-mixin: basic;
+    }
 
-.root ProductsList {
-    -st-mixin: productGrid;
+    Header {
+        -st-mixin: header;
+    }
+
+    ProductsList {
+        -st-mixin: productGrid;
+    }   
 }

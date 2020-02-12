@@ -56,19 +56,21 @@
     --color-success-contrast: white;
 }
 
-.root Button {
-    padding: 1rem;
+@st-scope .root {
+    Button {
+        padding: 1rem;
+    }
+
+    .cancelButton {
+        --color-secondary-dark: gold;
+        --color-secondary-main: orange;
+    }
+
+    .okButton {}
+
+    Card {}
+
+    ImageView {}
+
+    Menu {}
 }
-
-.root .cancelButton {
-    --color-secondary-dark: gold;
-    --color-secondary-main: orange;
-}
-
-.root .okButton {}
-
-.root Card {}
-
-.root ImageView {}
-
-.root Menu {}
