@@ -1,5 +1,5 @@
+import React from 'react';
 import { classes, st } from './products-list.st.css';
-import * as React from 'react';
 import { IProduct } from '../../stores/products-store';
 import { AppProductItem as ProductItem, AppProductItemProps } from '../product-item/product-item';
 

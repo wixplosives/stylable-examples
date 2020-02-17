@@ -1,5 +1,5 @@
-import { st, classes } from './bread-crumbs.st.css';
 import React from 'react';
+import { st, classes } from './bread-crumbs.st.css';
 
 export interface BreadCrumbsItem {
     title: string;

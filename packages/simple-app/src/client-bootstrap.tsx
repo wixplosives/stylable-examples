@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { ProductsCollectionPage } from './components/products-collection-page/products-collection-page';
 import { loadFonts } from './setup/load-fonts';

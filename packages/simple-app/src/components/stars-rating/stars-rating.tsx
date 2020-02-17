@@ -1,5 +1,5 @@
-import { st, classes } from './stars-rating.st.css';
 import React from 'react';
+import { st, classes } from './stars-rating.st.css';
 
 export interface StarsRatingProps {
     rating: number;

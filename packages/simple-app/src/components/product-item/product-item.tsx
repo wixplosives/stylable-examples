@@ -1,9 +1,9 @@
-import { Button } from '../button/button';
 import React from 'react';
+import { CommonClasses } from '../../common/common-classes';
+import { Button } from '../button/button';
+import { ImageView } from '../image-view/image-view';
 import { classes, st } from './product-item.st.css';
 import { StarsRating } from '../stars-rating/stars-rating';
-import { ImageView } from '../image-view/image-view';
-import { CommonClasses } from '../../common/common-classes';
 
 export interface AppProductItemProps extends React.HTMLAttributes<HTMLDivElement> {
     imageUrl: string;
