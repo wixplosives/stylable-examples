@@ -34,7 +34,7 @@ project-root
 ## Technical highlights
 
 ### Defining common variables
-This project makes use of CSS variables (custom properties) to define a high level design interface for the entire application. This can be found in the `./src/common/project.st.css` file.
+This project makes use of CSS variables (custom properties) to define a high level design system interface for the entire application. This can be found in the `./src/common/project.st.css` file.
 
 These variables are grouped together according to their semantics, for example, colors, font-related, borders, spacing and so on.
 
@@ -50,7 +50,8 @@ These variables are grouped together according to their semantics, for example, 
     /* DEFAULT SIZES */
     --unit-m: 7px;
     --unit-l: 10px;
-    ...
+    
+    /* ... */
 }
 ```
 
@@ -83,16 +84,16 @@ A `Button` component can be used as a `cancelButton`, `okButton`, `optionalButto
 It can also be a way to create a specific design for a component to fit a theme or purpose, as is done in this project. Looking at the `ProductItem` component and the variant stylesheet `./src/components/product-item/variants/product-item-basic.st.css` we can see a full design being applied to the entire component. 
 
 ```css
-.basic {
+.basicProductItem {
     -st-extends: ProductItem;
     font-family: var(--font-family-secondary);
 }
 
-.basic::productImage {
+.basicProductItem::productImage {
     transition: all 0.2s;
 }
 
-.basic::productImage:hover {
+.basicProductItem::productImage:hover {
     transform: scale(1.1);
 }
 
@@ -108,13 +109,13 @@ This design is then applied in the `./src/themes/basic/basic.st.css` theme as a 
 }
 
 :import {
-    -st-from: "../components/header/variants/header-basic.st.css";
-    -st-named: header;
+    -st-from: "../components/product-item/variants/product-item-basic.st.css";
+    -st-named: basicProductItem;
 }
 
 @st-scope .root {
     ProductItem {
-        -st-mixin: basic;
+        -st-mixin: basicProductItem;
     }
 
     /* ... */
