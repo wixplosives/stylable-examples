@@ -10,6 +10,9 @@ const themes = {
     gentle: [project.root, basic.root, gentle.root]
 };
 
+// This functions changes the application them by appending the selected
+// theme class name to the top of the document. In this application,
+// only a single theme is applied at a time.
 export function changeTheme(name: keyof typeof themes) {
     localStorage.simpleAppCurrentTheme = name;
     document.documentElement.className = themes[name].join(' ');

@@ -41,7 +41,7 @@ This project shows a simple e-commerce products page demo application.
 - The project includes multiple themes: `Basic`, `Dark` and `Gentle`. Achieved by overriding the project variables and specifically customizing pieces of UI to the desired result
 
 ### Components Library
-This projects demonstrates a way of creating a Stylable component library.
+This project demonstrates a method of creating a Stylable component library.
 
 #### Example highlights
 - Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `project.st.css` file, creating a unified look for the library
@@ -49,9 +49,10 @@ This projects demonstrates a way of creating a Stylable component library.
 - The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use 
 
 ## To Do!
-We intend on incrementally adding various use-cases and topics to demonstrate additional topics or problems.
+We intend on incrementally adding various use-cases and topics to demonstrate additional topics or problems. We gladly welcome new issues suggesting further patterns or uses.
 
 These are on our list to add:
 - publishing - how to publish various project types for consumption with and without Stylable
 - namespacing - advanced namespacing solutions for creating public APIs
 - server-side rendering - how to implement server side rendering using `@stylable/node`
+- cross mono-repo usage - how to create and consume a component library in different packages within the same mono-repo

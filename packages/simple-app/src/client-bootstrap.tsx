@@ -18,6 +18,9 @@ changeTheme(theme);
 const root = document.createElement('div');
 document.body.appendChild(root);
 
+// This is the top level render of our application.
+// The "ThemeBar" component is external to the application
+// and serves as way to quickly change themes in runtime.
 ReactDOM.render(
     <>
         <ThemeBar theme={theme} />

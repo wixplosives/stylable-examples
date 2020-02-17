@@ -4,14 +4,14 @@
     Define general purpose utility classes that can be composed and 
     used in a variety of places without being locked down to a specific component
  */
+.resetAnchor {
+    text-decoration: none;
+    color: inherit;
+}
+
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 0;
-}
-
-.resetAnchor {
-    text-decoration: none;
-    color: inherit;
 }

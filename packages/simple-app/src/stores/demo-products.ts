@@ -46,7 +46,7 @@ export const demoProducts = [
         reviewsCount: 22
     },
     {
-        productId: 'grw2as',
+        productId: 'siv4lem',
         imageUrl: '../../assets/notebooks/tiger-lady.png',
         productTitle: 'Tiger Lady',
         modelName: 'Fresh Jungle Boogie',

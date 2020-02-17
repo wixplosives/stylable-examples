@@ -6,25 +6,6 @@
         --color-primary-contrast,
         --overlay-color-1,
         --overlay-color-8,
-
-        --unit-m,
-        --unit-l,
-        --unit-xl,
-        --unit-xxl,
-
-        --pad-s,
-        --pad-m,
-        --pad-l,
-
-        --font-family-primary,
-
-        --font-family-secondary,
-        --font-xs,
-        --font-s,
-        --font-m,
-        --font-l,
-        --font-xl,
-        --font-xxl
 }
 
 :import {
@@ -32,35 +13,16 @@
     -st-default: ProductPage;
 }
 
-:import {
-    -st-from: "../components/button/button.st.css";
-    -st-default: Button;
+:vars {
+    brownish: rgb(70, 57, 57);
 }
 
 .root {
-    --color-bg: rgb(70, 57, 57);
+    --color-bg: value(brownish);
     --color-primary: rgb(255, 255, 255);
     --color-primary-contrast: rgb(0, 0, 0);
     --overlay-color-1: rgba(0, 0, 0, 0.07);
     --overlay-color-8: rgba(0, 0, 0, 0.8);
-
-    --unit-m: 7px;
-    --unit-l: 10px;
-    --unit-xl: 10px;
-    --unit-xxl: 20px;
-
-    --pad-s: 1.5rem;
-    --pad-m: 3rem;
-    --pad-l: 5rem;
-
-    --font-family-primary: Caudex, serif;
-    --font-family-secondary: Prompt, sans-serif;
-    --font-xs: 10px;
-    --font-s: 12px;
-    --font-m: 14px;
-    --font-l: 16px;
-    --font-xl: 18px;
-    --font-xxl: 24px;
 }
 
 @st-scope .root {
@@ -73,18 +35,18 @@
     }
 
     /* 
-        Targetting specific instances of a component to 
+        Targetting specific usages of a component to 
         make sure they match the rest of the design
     */
     ProductPage::productList::productItem::bannerNew {
-        --color-primary-contrast: rgb(70, 57, 57);
+        --color-primary-contrast: value(brownish);
     }
 
     ProductPage::productList::productItem::addToCartButton:hover {
-        color: rgb(70, 57, 57);
+        color: value(brownish);
     }
 
     ProductPage::productList::productItem::addToCartButton:isAddedToCart {
-        color: rgb(70, 57, 57);
+        color: value(brownish);
     }
 }

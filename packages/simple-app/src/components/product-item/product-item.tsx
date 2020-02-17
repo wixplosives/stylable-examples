@@ -39,7 +39,7 @@ export const AppProductItem = React.memo<AppProductItemProps>(props => {
     const normalizedRating =
         reviewsAverageRating !== undefined ? Math.min(Math.max(reviewsAverageRating, 0), 5) : undefined;
 
-    const productUrl = `/product/${productId}`;
+    const productUrl = `/#${productId}`;
     const addToCart = onAddToCartButtonClick ? () => onAddToCartButtonClick(productId) : undefined;
 
     return (
