@@ -1,5 +1,5 @@
-import { st, classes } from './menu.st.css';
 import React from 'react';
+import { st, classes } from './menu.st.css';
 
 export interface MenuItem {
     title: string;

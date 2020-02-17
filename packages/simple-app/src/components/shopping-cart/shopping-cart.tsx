@@ -1,5 +1,5 @@
+import React from 'react';
 import { st, classes } from './shopping-cart.st.css';
-import * as React from 'react';
 
 export interface ShoppingCartProps {
     className?: string;

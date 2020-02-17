@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { ThemeBar, changeTheme } from './theme-selector';
 import { st, classes as demo } from './demo.st.css';

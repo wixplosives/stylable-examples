@@ -1,5 +1,5 @@
-import { st, classes } from './mobile-menu.st.css';
 import React, { useContext } from 'react';
+import { st, classes } from './mobile-menu.st.css';
 import { Menu, MenuProps } from '../menu/menu';
 import { Button } from '../button/button';
 import { UserStatus } from '../user-status/user-status';
