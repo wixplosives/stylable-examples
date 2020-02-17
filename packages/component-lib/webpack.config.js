@@ -6,7 +6,7 @@ module.exports = {
     devtool: 'source-map',
     entry: join(__dirname, 'src', 'demo'),
     output: {
-        path: join(__dirname, 'umd'),
+        path: join(__dirname, 'dist'),
         publicPath: '/'
     },
     module: {

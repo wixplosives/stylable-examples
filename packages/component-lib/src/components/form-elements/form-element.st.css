@@ -1,0 +1,79 @@
+:import {
+    -st-from: "../../common/project.st.css";
+    -st-named:  --color-primary-main, --color-primary-contrast;
+}
+
+.toggle,
+.checkbox,
+.radio {
+    --size: 1.5em;
+    --symbol-color: var(--color-primary-main,black);
+    --color: var(--color-primary-main,black);
+    --bg: var(--color-primary-contrast,white);
+
+    background: var(--bg);
+    height: var(--size);
+    width: var(--size);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--color);
+    border-radius: 2px;
+    vertical-align: top;
+}
+
+.radio {
+    border-radius: 50%;
+}
+
+.checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    width: 40%;
+    height: 70%;
+    border: 2px solid var(--symbol-color);
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+}
+
+.radio:checked::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    background: var(--symbol-color);
+    border-radius: 50%;
+}
+
+.toggle:disabled,
+.checkbox:disabled,
+.radio:disabled {
+    cursor: not-allowed;
+    filter: saturate(15%) brightness(70%);
+}
+
+.toggle {
+    width: 3em;
+    border-radius: 9999px;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    width: calc(50%);
+    height: calc(100%);
+    background: var(--color);
+    border-radius: 9999px;
+    transition: all 0.2s; 
+    transform: translate(0);
+}
+
+.toggle:checked::after {
+    transform: translate(100%);
+}

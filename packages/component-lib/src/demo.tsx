@@ -10,7 +10,12 @@ import { classes as buttonVariants } from './components/button/variants.st.css';
 import { ImageView } from './components/image-view/image-view';
 import { Menu } from './components/menu/menu';
 
+// native form elements themed variants
+import { classes as formElements } from './components/form-elements/form-element.st.css'
+
 const theme = localStorage.currentTheme || 'basic';
+
+const compassUrl = '../assets/compass.jpg';
 
 changeTheme(theme);
 
@@ -51,19 +56,19 @@ function ComponentsPlayground() {
             <div className={st(demo.box, demo.row)}>
                 <div>
                     <h4>Default</h4>
-                    <ImageView src={'../assets/compass.jpg'} width={300} />
+                    <ImageView src={compassUrl} width={300} />
                 </div>
                 <div>
                     <h4>Contain - 300x100</h4>
-                    <ImageView src={'../assets/compass.jpg'} resizeMode={'contain'} width={300} height={100} />
+                    <ImageView src={compassUrl} resizeMode={'contain'} width={300} height={100} />
                 </div>
                 <div>
                     <h4>Fill - 300x150</h4>
-                    <ImageView src={'../assets/compass.jpg'} resizeMode={'fill'} width={300} height={150} />
+                    <ImageView src={compassUrl} resizeMode={'fill'} width={300} height={150} />
                 </div>
                 <div style={{marginLeft: '20px'}}>
                     <h4>Cover - 300x150</h4>
-                    <ImageView src={'../assets/compass.jpg'} resizeMode={'cover'} width={300} height={150} />
+                    <ImageView src={compassUrl} resizeMode={'cover'} width={300} height={150} />
                 </div>
             </div>
             <h2>Menu</h2>
@@ -82,10 +87,19 @@ function ComponentsPlayground() {
             <div className={demo.box}>
                 <Card style={{ width: 300 }}>
                     <h4>Time is ticking</h4>
-                    <ImageView src={'../assets/compass.jpg'} />
+                    <ImageView src={compassUrl} />
                     <p>There is no way we can find more time</p>
                 </Card>
             </div>
+
+            <h2>Form Elements</h2>
+            <input type="checkbox" className={formElements.checkbox}/>
+            <input type="checkbox" className={formElements.checkbox} disabled/>
+            <input type="radio" className={formElements.radio} name="radio" />
+            <input type="radio" className={formElements.radio} name="radio" />
+            <input type="checkbox"  className={formElements.toggle}/>
+            <input type="checkbox" className={formElements.toggle} disabled/>
+            
             <h2>Typography</h2>
             <h1>H1 Heading</h1>
             <h2>H2 Heading</h2>

@@ -9,7 +9,7 @@ export interface ImageViewProps extends React.ImgHTMLAttributes<HTMLImageElement
     className?: string;
 }
 
-export const ImageView = React.memo<ImageViewProps>(props => {
+export const ImageView = React.memo(function ImageView(props: ImageViewProps) {
     const {
         resizeMode = 'contain',
         positionVertical = 'top',

@@ -3,9 +3,9 @@ import { st, classes } from './button.st.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    onClick?: (event: React.MouseEvent) => void;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     text?: string;
-    icon?: React.ReactElement;
+    icon?: React.ReactNode;
 }
 
 export function Button({ className, onClick, text, icon, ...attrs }: ButtonProps) {

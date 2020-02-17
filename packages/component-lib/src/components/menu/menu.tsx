@@ -12,7 +12,7 @@ export interface MenuProps {
     className?: string;
 }
 
-export const Menu = React.memo<MenuProps>(props => {
+export const Menu = React.memo(function Menu(props: MenuProps) {
     const { menuItems = [], layout, className } = props;
 
     return (
