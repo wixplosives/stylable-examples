@@ -16,7 +16,7 @@ project-root
  |
  └── src
     ├── client-bootstrap.tsx     - application rendering root
-    ├── theme-selector.tsx       - theme swapper component (for the demo)
+    ├── theme-selector.tsx       - theme swapping component (for the demo)
     |
     ├── common
     |  ├── common-classes.st.css - utility classes 
