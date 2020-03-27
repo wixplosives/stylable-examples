@@ -1,19 +1,17 @@
 # Stylable Examples
 
-This repo serves as a collection of use-case examples of how Stylable can be used in a variety of different situations.
+This repo is a collection of use-case examples showing how Stylable can be used in different situations. Working with these examples can show you how Stylable can be used in your own repos and projects.
 
 ## What we talk about when we talk about theming
-Theming allows taking components or applications and quickly overriding or customizing them in order to create a new look or style without changing the internals.
+Theming enables taking components or applications and quickly overriding or customizing them  to create a new look or style without changing the internals of the component.
 
-By creating even a single theme for your project, you enforce a certain degree of design consistency across your project. Ensuring that various parts of the UI work together well and adhere to the same aesthetic language. 
+By creating even a single theme for your project, you enforce a certain degree of design consistency across your project, and can ensure that various parts of the UI work together well and adhere to the same aesthetic language. 
 
 Theming is also about organizing your project in a way that is easy to maintain, less prone to style repetitions and with a consistent predictable way of interacting with the project's inner parts.
 
 ### Disclaimer
 
-Despite the definition above, when discussing the matter of theming, it's important to remember that there is no single correct way of doing so.
-
-Theming components and applications can be done in a multitude of ways, according to different product requirements, runtime environments, platforms supported, resources available and many additional factors.
+Theming components and applications can be done in many different ways. Some important factors to take into consideration are different product requirements, runtime environments, supported platforms, available resources and other considerations.
 
 Theming is not a clearly defined term, but rather, a range of possible solutions offering various trade-offs.  
 Generally speaking the more customizable / theme-able you want your project to be, the more wiring and internal dependencies are being created. Maintaining such complex styling structures can have a considerable development cost attributed to them, and should be considered in advance.
