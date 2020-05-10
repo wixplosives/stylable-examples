@@ -1,6 +1,6 @@
 # Stylable Examples
 
-This repo is a collection of use-case examples showing how Stylable can be used in different situations. Working with these examples can show you how Stylable can be used in your own repos and projects.
+This repo is a collection of use-case examples showing how Stylable can be used in different situations. Working with these examples can show you how Stylable can be used in your own projects.
 
 ## What we talk about when we talk about theming
 Theming enables taking components or applications and quickly overriding or customizing them to create a new look or style without changing the internals of the component.
@@ -11,10 +11,10 @@ Theming is also about organizing your project in a way that is easy to maintain 
 
 ### Disclaimer
 
-Theming components and applications can be done in many different ways. Some of the important factors to take into consideration include  product requirements, runtime environments, supported platforms, available resources.
+Theming components and applications can be done in many different ways. Some of the important factors to take into consideration include product requirements, runtime environments, supported platforms, available resources.
 
 Theming is not a clearly defined term, but rather, a range of possible solutions offering various trade-offs.  
-Generally speaking the more customizable or theme-able you want your project to be, the more wiring and internal dependencies are created. Maintaining such complex styling structures can have a considerable development cost, and should be considered in advance. //This needs more explanation or should be removed. Doesn't add anything on its own other than confusing reader.//
+Generally speaking the more customizable or theme-able you want your project to be, the more wiring and internal dependencies are created. Maintaining such complex styling structures can have a considerable development cost, and should be considered in advance.
 
 ## Running the projects
 Each project in the `packages` directory is a stand-alone project, with its demo page.
@@ -28,7 +28,7 @@ To run the projects locally:
 
 ## Example projects
 
-Here is a list of the example projects included in this repo and what the highlights are of each.
+Here is a list of the example projects included in this repo and a brief highlights description of each one.
 
 ### Simple App
 The **Simple App** project shows a demo application of a simple e-commerce products page.
@@ -45,7 +45,7 @@ The **Components Library** project demonstrates creating a Stylable component li
 
 #### Example highlights
 - Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `project.st.css` file, creating a unified look for the library.
-- All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one //specific one of what?// through a theme or override.
+- All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one through a theme or override.
 - The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use.
 
 ## To Do!
