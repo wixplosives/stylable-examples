@@ -10,6 +10,7 @@
     "lint": "eslint . -f codeframe",
     "start": "yarn workspace simple-app start",
     "typecheck": "tsc --noEmit",
+    "test": "yarn typecheck && yarn lint",
     "prettify": "npx prettier \"packages/**/*.{js,ts,tsx}\" --write"
   },
   "devDependencies": {

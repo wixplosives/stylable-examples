@@ -6,7 +6,7 @@ const fonts = [
     createGoogleFontUrl('Prompt', ['300', '400', '500', '600', '700']),
     createGoogleFontUrl('Caudex', ['400', '700']),
     createGoogleFontUrl('Tomorrow', ['400', '700']),
-    createGoogleFontUrl('Montserrat', ['400', '700'])
+    createGoogleFontUrl('Montserrat', ['400', '700']),
 ];
 
 function loadFont(href: string) {
@@ -16,4 +16,4 @@ function loadFont(href: string) {
     document.head.appendChild(link);
 }
 
-export const loadFonts = () => fonts.forEach(href => loadFont(href));
+export const loadFonts = () => fonts.forEach((href) => loadFont(href));

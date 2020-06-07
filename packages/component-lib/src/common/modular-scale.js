@@ -1,4 +1,4 @@
-module.exports.modularScale = function(index = '0', base = '1', ratio = '1.333') {
+module.exports.modularScale = function (index = '0', base = '1', ratio = '1.333') {
     return modularScale(parseFloat(index), parseFloat(base), parseFloat(ratio)) + 'em';
 };
 

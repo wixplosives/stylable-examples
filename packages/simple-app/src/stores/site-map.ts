@@ -1,26 +1,26 @@
 export const SiteMap = {
     HomePage: {
         title: 'Home',
-        url: '#'
+        url: '#',
     },
     Collections: {
         title: 'Collections',
-        url: '#'
+        url: '#',
     },
     NewCollections: {
         title: 'New Collections',
-        url: '#'
+        url: '#',
     },
     DivaCollection: {
         title: 'Diva Collection',
-        url: '#'
+        url: '#',
     },
     About: {
         title: 'About',
-        url: '#'
+        url: '#',
     },
     Shop: {
         title: 'Shop',
-        url: '#'
-    }
+        url: '#',
+    },
 };

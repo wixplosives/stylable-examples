@@ -6,7 +6,7 @@ export const demoProducts = [
         modelName: 'Full Open',
         price: '$13.00',
         reviewsAverageRating: 4,
-        reviewsCount: 22
+        reviewsCount: 22,
     },
     {
         productId: 'cddsw1',
@@ -15,7 +15,7 @@ export const demoProducts = [
         modelName: '21',
         price: '$10.00',
         reviewsAverageRating: 4,
-        reviewsCount: 22
+        reviewsCount: 22,
     },
     {
         productId: 'gdf21s',
@@ -25,7 +25,7 @@ export const demoProducts = [
         price: '$19.00',
         reviewsAverageRating: 3.3,
         reviewsCount: 8,
-        isNew: true
+        isNew: true,
     },
     {
         productId: 'ds21asf',
@@ -34,7 +34,7 @@ export const demoProducts = [
         modelName: 'Special red edition',
         price: '$20.00',
         reviewsAverageRating: 4,
-        reviewsCount: 31
+        reviewsCount: 31,
     },
     {
         productId: 'grw2as',
@@ -43,7 +43,7 @@ export const demoProducts = [
         modelName: 'Type Up',
         price: '$9.00',
         reviewsAverageRating: 4,
-        reviewsCount: 22
+        reviewsCount: 22,
     },
     {
         productId: 'siv4lem',
@@ -52,6 +52,6 @@ export const demoProducts = [
         modelName: 'Fresh Jungle Boogie',
         price: '$60.00',
         reviewsAverageRating: 4,
-        reviewsCount: 22
-    }
+        reviewsCount: 22,
+    },
 ];

@@ -27,7 +27,7 @@ export const ImageView = React.memo(function ImageView(props: ImageViewProps) {
             style={{
                 [vars.objectFit]: resizeMode,
                 [vars.objectPositionVertical]: positionVertical,
-                [vars.objectPositionHorizontal]: positionHorizontal
+                [vars.objectPositionHorizontal]: positionHorizontal,
             }}
         />
     );
