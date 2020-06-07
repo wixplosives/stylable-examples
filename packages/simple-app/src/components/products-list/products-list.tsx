@@ -10,10 +10,10 @@ export interface ProductsListProps {
     className?: string;
 }
 
-export const ProductsList = React.memo<ProductsListProps>(props => {
+export const ProductsList = React.memo<ProductsListProps>(function ProductsList(props) {
     const { products = [], productsInCart = [], onAddToCartButtonClick, className } = props;
 
-    const productItems = products.map(product => {
+    const productItems = products.map((product) => {
         return (
             <ProductItem
                 className={classes.productItem}

@@ -7,7 +7,7 @@ export interface UserStatusProps {
     userInfo?: UserInfo | null;
 }
 
-export const UserStatus = React.memo<UserStatusProps>(props => {
+export const UserStatus = React.memo<UserStatusProps>(function UserStatus(props) {
     const { className, userInfo } = props;
 
     return (

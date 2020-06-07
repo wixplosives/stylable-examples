@@ -9,7 +9,7 @@ export interface ImageViewProps {
     className?: string;
 }
 
-export const ImageView = React.memo<ImageViewProps>(props => {
+export const ImageView = React.memo<ImageViewProps>(function ImageView(props) {
     const { resizeMode = 'contain', positionVertical = 'top', positionHorizontal = 'center', src, className } = props;
 
     return (
@@ -19,7 +19,7 @@ export const ImageView = React.memo<ImageViewProps>(props => {
             style={{
                 [vars.objectFit]: resizeMode,
                 [vars.objectPositionVertical]: positionVertical,
-                [vars.objectPositionHorizontal]: positionHorizontal
+                [vars.objectPositionHorizontal]: positionHorizontal,
             }}
         />
     );

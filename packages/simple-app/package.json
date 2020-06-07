@@ -10,7 +10,7 @@
     "start": "yarn webpack-dev-server"
   },
   "dependencies": {
-    "@stylable/runtime": "^3.4.5",
+    "@stylable/runtime": "^3.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

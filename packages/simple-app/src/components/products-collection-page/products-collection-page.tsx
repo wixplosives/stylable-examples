@@ -8,7 +8,7 @@ import { SiteMap } from '../../stores/site-map';
 const siteMenu = [
     { title: SiteMap.Collections.title, url: SiteMap.Collections.url },
     { title: SiteMap.Shop.title, url: SiteMap.Shop.url },
-    { title: SiteMap.About.title, url: SiteMap.About.url }
+    { title: SiteMap.About.title, url: SiteMap.About.url },
 ];
 
 export interface ProductsCollectionPageProps {
@@ -17,15 +17,15 @@ export interface ProductsCollectionPageProps {
     className?: string;
 }
 
-export const ProductsCollectionPage = React.memo<ProductsCollectionPageProps>(props => {
+export const ProductsCollectionPage = React.memo<ProductsCollectionPageProps>(function ProductsCollectionPage(props) {
     const { products, breadCrumbs, className } = props;
 
     const [productsInCart, setProductsInCart] = useState<string[]>([]);
 
-    const onAddToCartButtonClick: ProductsListProps['onAddToCartButtonClick'] = productId => {
-        setProductsInCart(products => {
+    const onAddToCartButtonClick: ProductsListProps['onAddToCartButtonClick'] = (productId) => {
+        setProductsInCart((products) => {
             if (products.includes(productId)) {
-                return products.filter(existingProductId => existingProductId !== productId);
+                return products.filter((existingProductId) => existingProductId !== productId);
             } else {
                 return [...products, productId];
             }

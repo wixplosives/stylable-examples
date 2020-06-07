@@ -20,7 +20,7 @@ const xIcon = (
     </svg>
 );
 
-export const MobileMenu = React.memo<MobileMenuProps>(props => {
+export const MobileMenu = React.memo<MobileMenuProps>(function MobileMenu(props) {
     const { className, menuItems, onCloseButtonClick } = props;
 
     const loggedInUser = useContext(LoggedInUserContext);
