@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "yarn webpack-dev-server"
+    "start": "webpack-dev-server --open"
   },
   "dependencies": {
     "@stylable/runtime": "^3.6.2",
