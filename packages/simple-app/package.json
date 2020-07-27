@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "@stylable/runtime": "^3.8.1",
+    "@stylable/runtime": "^3.8.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
