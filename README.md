@@ -1,5 +1,7 @@
 # Stylable Examples
 
+[![Build Status](https://github.com/wixplosives/stylable-examples/workflows/tests/badge.svg)](https://github.com/wixplosives/stylable-examples/actions)
+
 This repo is a collection of use-case examples showing how Stylable can be used in different situations. Working with these examples can show you how Stylable can be used in your own projects.
 
 ## What we talk about when we talk about theming
