@@ -9,9 +9,11 @@
   "scripts": {
     "start": "webpack-dev-server --open"
   },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
   "dependencies": {
-    "@stylable/runtime": "^3.11.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "@stylable/runtime": "^3.11.2"
   }
 }
