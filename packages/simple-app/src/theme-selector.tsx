@@ -7,7 +7,7 @@ import { classes as gentle } from './themes/gentle.st.css';
 const themes = {
     basic: [project.root, basic.root],
     dark: [project.root, basic.root, dark.root],
-    gentle: [project.root, basic.root, gentle.root]
+    gentle: [project.root, basic.root, gentle.root],
 };
 
 // This functions changes the application them by appending the selected

@@ -11,7 +11,7 @@ export interface BreadCrumbsProps {
     className?: string;
 }
 
-export const BreadCrumbs = React.memo<BreadCrumbsProps>(props => {
+export const BreadCrumbs = React.memo<BreadCrumbsProps>(function BreadCrumbs(props) {
     const { items = [], className } = props;
 
     const menuItemsViews = items.map((menuItem, index) => {

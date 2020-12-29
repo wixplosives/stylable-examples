@@ -8,9 +8,9 @@ import { ThemeBar, changeTheme } from './theme-selector';
 
 const breadCrumbs = [
     { title: 'Home', url: '#' },
-    { title: 'Watches', url: '#' }
+    { title: 'Watches', url: '#' },
 ];
-const theme = localStorage.currentTheme || 'basic';
+const theme = (localStorage.currentTheme as 'basic' | 'dark' | 'gentle') || 'basic';
 
 loadFonts();
 changeTheme(theme);

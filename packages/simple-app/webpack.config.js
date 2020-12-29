@@ -7,13 +7,13 @@ module.exports = {
     entry: join(__dirname, 'src', 'client-bootstrap'),
     output: {
         path: join(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: '/',
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: '@ts-tools/webpack-loader'
+                loader: '@ts-tools/webpack-loader',
             },
             {
                 test: filePath => !filePath.endsWith('.st.css') && filePath.endsWith('.css'),
@@ -29,9 +29,9 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.mjs', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.mjs', '.js', '.json'],
     },
-    plugins: [new HtmlWebpackPlugin(), new StylableWebpackPlugin({ resolveNamespace: noCollisionNamespace() })]
+    plugins: [new HtmlWebpackPlugin(), new StylableWebpackPlugin({ resolveNamespace: noCollisionNamespace() })],
 };
 
 function noCollisionNamespace({ prefix = '', used: usedNamespaces = new Map() } = {}) {

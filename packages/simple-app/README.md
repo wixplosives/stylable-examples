@@ -1,13 +1,13 @@
 # Simple Application - Example
 
-This project shows a simple e-commerce products page demo application.
+This project shows a demo application of a simple e-commerce products page.
 
 ## General description
-- A collection of components used together to build an application, with `products-collection-page` as its top level component
-- All components that are required for the application are written specifically for it and are not generic in nature
-- No 3rd-party components are used
-- The project uses CSS vars (custom properties) in its common definitions and throughout most components
-- The project includes multiple themes: `Basic`, `Dark` and `Gentle`. Created by overriding the project variables and specifically customizing pieces of UI to the desired result
+- A collection of components used together to build an application, with `products-collection-page` as its top level component.
+- All components that are required for the application are written specifically for it and are not generic in nature.
+- No 3rd-party components are used.
+- The project uses CSS vars (custom properties) in its common definitions and throughout most components.
+- The project includes multiple themes: `Basic`, `Dark` and `Gentle`. Each theme is achieved by overriding the project variables and specifically customizing pieces of UI to get the desired result.
 
 ### Project structure
 
@@ -16,18 +16,18 @@ project-root
  |
  └── src
     ├── client-bootstrap.tsx     - application rendering root
-    ├── theme-selector.tsx       - theme swapper component (for the demo)
+    ├── theme-selector.tsx       - theme swapping component (for the demo)
     |
     ├── common
     |  ├── common-classes.st.css - utility classes 
-    |  └── project.st.css        - css reset and base variables
+    |  └── project.st.css        - CSS reset and base variables
     |
     ├── components               - contains all application components
     |
     └── themes
        ├── basic.st.css          - theme using mixins
        ├── dark.st.css           - theme with variable overrides
-       └── gentle.st.css         - theme with inner parts customization
+       └── gentle.st.css         - theme with customized inner parts
 ```
 
 
@@ -36,7 +36,7 @@ project-root
 ### Defining common variables
 This project makes use of CSS variables (custom properties) to define a high level design system interface for the entire application. This can be found in the `./src/common/project.st.css` file.
 
-These variables are grouped together according to their semantics, for example, colors, font-related, borders, spacing and so on.
+These variables are grouped together according to their semantics, for example, colors, fonts, borders, spacing and so on.
 
 ```css
 .root {
@@ -55,14 +55,14 @@ These variables are grouped together according to their semantics, for example, 
 }
 ```
 
-Each component in the repo can import these variables and apply them to their relevant parts of UI.
+Each component in the repo can import these variables and apply them to their relevant parts of the UI.
 
 ### Applying minimal style / decoration
-Despite being an application with custom-built components, those components still strive to include only the minimal styling required in order to achieve their base functionality.
+While this is an application with custom-built components, those components still strive to include only the minimal styling required to achieve their basic functionality.
 
-This sort of minimal styling can include critical variable linking (making sure text is visible), layout definitions, possible states and so on. This concept is a fluid definition and would change from component to component and project to project. As more definitions are included in the base styling it requires more overrides to theme and customize externally.
+This minimal styling can include critical variable linking (making sure text is visible), layout definitions, possible states and so on. The concept of minimal styling is fluid and would change from component to component and project to project. As more definitions are included in the basic styling, the components would require more overrides to theme and customize externally.
 
-For example we can look at `./src/components/stars-rating/stars-rating.st.css` stylesheet and see states and critical coloring being applied.
+For example take a look at `./src/components/stars-rating/stars-rating.st.css` stylesheet and see states and critical coloring applied.
 
 ```css
 .root {}
@@ -79,9 +79,9 @@ For example we can look at `./src/components/stars-rating/stars-rating.st.css` s
 ### Using a component variant
 Variants are a way of defining additional styles for a component to be used under different product conditions. 
 
-A `Button` component can be used as a `cancelButton`, `okButton`, `optionalButton` and so on according to how it is used in the application while still maintaining a single place to edit their styles.
+A `Button` component can be used as a `cancelButton`, `okButton`, `optionalButton` and so on, according to how it is used in the application. Using the one component maintains a single place to edit the different button styles.
 
-It can also be a way to create a specific design for a component to fit a theme or purpose, as is done in this project. Looking at the `ProductItem` component and the variant stylesheet `./src/components/product-item/variants/product-item-basic.st.css` we can see a full design being applied to the entire component. 
+As you can see in this project, it can also be a way to create a specific design for a component to fit a theme or purpose. Looking at the `ProductItem` component and the variant stylesheet `./src/components/product-item/variants/product-item-basic.st.css`, you can see a full design being applied to the entire component. 
 
 ```css
 .basicProductItem {
@@ -123,7 +123,7 @@ This design is then applied in the `./src/themes/basic/basic.st.css` theme as a 
 ```
 
 ### Creating an application theme
-In this project we've chosen to show three similar ways of creating a theme for the application, but with a slight difference in each one.
+In this project you can see three similar ways of creating a theme for the application, but with a slight difference in each one.
 
 - `basic.st.css` - A simple theme which relies heavily on the `project.st.css` default design, extending it for specific components by using variant mixins.
 
@@ -137,7 +137,7 @@ In this project we've chosen to show three similar ways of creating a theme for 
 }
 ```
 
-- `dark.st.css` - In this case, the only change we are making is to swapping some of the common variables defined in the `project.st.css` stylesheet. By changing colors, sizing units, and typography related values we create a custom new look for our dark theme.
+- `dark.st.css` - In this case, the only change is to swap some of the common variables defined in the `project.st.css` stylesheet. By changing colors, sizing units, and typography-related values, the dark theme has a new custom look.
 
 ```css
 .root {
@@ -153,7 +153,7 @@ In this project we've chosen to show three similar ways of creating a theme for 
 }
 ```
 
-- `gentle.st.css` - Here we modify the common variables much like the example above, but due to the color pallette chosen, additional fine-tunings were required to make it achieve the required design.
+- `gentle.st.css` - Here you can see the common variables modified much like the example above. But because of the color pallette chosen, additional fine-tunings are required to make it achieve the required design.
 
 This is done by using selectors and their pseudo-elements to target the component part that requires styling.
 
@@ -188,9 +188,9 @@ This is done by using selectors and their pseudo-elements to target the componen
 ```
 
 ### CSS reset
-Like many frontend projects we would like to perform a [CSS reset](https://meyerweb.com/eric/tools/css/reset/) to define the default look of native elements throughout our application.
+Like many frontend projects, let's perform a [CSS reset](https://meyerweb.com/eric/tools/css/reset/) to define the default look of native elements throughout our application.
 
-In the case of this project, we are applying our CSS reset through the same `projects.st.css` mentioned above.
+In this project, lets apply our CSS reset through the same `projects.st.css` mentioned above.
 
 ```css
 /* 

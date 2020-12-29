@@ -14,7 +14,7 @@ export const createGoogleFontUrl = (
     styleVariations: IFontStyleVariation[] = defaultStyleVariations
 ) => {
     const variationsStr = styleVariations
-        .map(variation => {
+        .map((variation) => {
             if (typeof variation === 'string') {
                 return variation;
             } else {

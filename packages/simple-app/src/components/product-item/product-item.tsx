@@ -20,7 +20,7 @@ export interface AppProductItemProps extends React.HTMLAttributes<HTMLDivElement
     isAddedToCart?: boolean;
 }
 
-export const AppProductItem = React.memo<AppProductItemProps>(props => {
+export const AppProductItem = React.memo<AppProductItemProps>(function AppProductItem(props) {
     const {
         productId,
         productTitle,

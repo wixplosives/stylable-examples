@@ -6,7 +6,7 @@ import { classes as basic } from './themes/basic.st.css';
 
 const themes = {
     raw: [project.root],
-    basic: [project.root, basic.root]
+    basic: [project.root, basic.root],
     // dark: [project.root, basic.root, dark.root],
     // gentle: [project.root, basic.root, gentle.root]
 };
@@ -29,7 +29,7 @@ export function ThemeBar({ theme }: { theme: string }) {
                     changeTheme(e.target.value as keyof typeof themes)
                 }
             >
-                {Object.keys(themes).map(name => (
+                {Object.keys(themes).map((name) => (
                     <option key={name} value={name}>
                         {name}
                     </option>

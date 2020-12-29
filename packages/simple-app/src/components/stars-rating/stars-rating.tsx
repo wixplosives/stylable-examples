@@ -6,7 +6,7 @@ export interface StarsRatingProps {
     className?: string;
 }
 
-export const StarsRating = React.memo<StarsRatingProps>(props => {
+export const StarsRating = React.memo<StarsRatingProps>(function StarsRating(props) {
     const { rating, className } = props;
 
     const normalizedRating = Math.min(Math.max(rating, 0), 5);

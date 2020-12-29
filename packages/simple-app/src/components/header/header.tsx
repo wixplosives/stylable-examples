@@ -15,7 +15,7 @@ export interface HeaderProps {
     shoppingCartItemsCount: ShoppingCartProps['itemsCount'];
 }
 
-export const Header = React.memo<HeaderProps>(props => {
+export const Header = React.memo<HeaderProps>(function Header(props) {
     const { className, menuItems, shoppingCartItemsCount } = props;
 
     const loggedInUser = useContext(LoggedInUserContext);

@@ -11,9 +11,9 @@ import { Menu } from './components/menu/menu';
 import { classes as buttonVariants } from './components/button/variants.st.css';
 
 // native form elements themed variants
-import { classes as formElements } from './components/form-elements/form-element.st.css'
+import { classes as formElements } from './components/form-elements/form-element.st.css';
 
-const theme = localStorage.currentTheme || 'basic';
+const theme = (localStorage.currentTheme as 'basic' | 'raw') || 'basic';
 
 const compassUrl = '../assets/compass.jpg';
 
@@ -26,7 +26,7 @@ const menuItems = [
     { title: 'Item A', url: '#' },
     { title: 'Item B', url: '#' },
     { title: 'Item C', url: '#' },
-    { title: 'Item D', url: '#' }
+    { title: 'Item D', url: '#' },
 ];
 
 function ComponentsPlayground() {
@@ -66,7 +66,7 @@ function ComponentsPlayground() {
                     <h4>Fill - 300x150</h4>
                     <ImageView src={compassUrl} resizeMode={'fill'} width={300} height={150} />
                 </div>
-                <div style={{marginLeft: '20px'}}>
+                <div style={{ marginLeft: '20px' }}>
                     <h4>Cover - 300x150</h4>
                     <ImageView src={compassUrl} resizeMode={'cover'} width={300} height={150} />
                 </div>
@@ -93,13 +93,13 @@ function ComponentsPlayground() {
             </div>
 
             <h2>Form Elements</h2>
-            <input type="checkbox" className={formElements.checkbox}/>
-            <input type="checkbox" className={formElements.checkbox} disabled/>
+            <input type="checkbox" className={formElements.checkbox} />
+            <input type="checkbox" className={formElements.checkbox} disabled />
             <input type="radio" className={formElements.radio} name="radio" />
             <input type="radio" className={formElements.radio} name="radio" />
-            <input type="checkbox"  className={formElements.toggle}/>
-            <input type="checkbox" className={formElements.toggle} disabled/>
-            
+            <input type="checkbox" className={formElements.toggle} />
+            <input type="checkbox" className={formElements.toggle} disabled />
+
             <h2>Typography</h2>
             <h1>H1 Heading</h1>
             <h2>H2 Heading</h2>

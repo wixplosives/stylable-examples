@@ -6,7 +6,7 @@ export interface ShoppingCartProps {
     itemsCount: number;
 }
 
-export const ShoppingCart = React.memo<ShoppingCartProps>(props => {
+export const ShoppingCart = React.memo<ShoppingCartProps>(function ShoppingCart(props) {
     const { className, itemsCount } = props;
 
     return (
