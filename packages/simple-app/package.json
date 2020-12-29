@@ -7,12 +7,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "yarn webpack-dev-server",
-    "start:prod": "yarn webpack-dev-server --mode production"
+    "start": "webpack-dev-server --open",
+    "start:prod": "webpack-dev-server --mode production --open"
   },
   "dependencies": {
     "@stylable/runtime": "^3.11.10",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
