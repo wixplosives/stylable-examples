@@ -9,6 +9,7 @@
     "build": "lerna run build --stream --parallel",
     "lint": "eslint . -f codeframe",
     "start": "yarn workspace simple-app start",
+    "start:lib": "yarn workspace component-lib start",
     "typecheck": "tsc --noEmit",
     "test": "yarn typecheck && yarn lint",
     "prettify": "npx prettier \"packages/**/*.{js,ts,tsx}\" --write"
