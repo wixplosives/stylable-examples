@@ -12,7 +12,7 @@ export function Button({ className, onClick, text, icon, ...attrs }: ButtonProps
     return (
         <button {...attrs} className={st(classes.root, className)} onClick={onClick}>
             {icon}
-            {text !== undefined && <span className="text">{text}</span>}
+            {text !== undefined && <span className={classes.text}>{text}</span>}
         </button>
     );
 }

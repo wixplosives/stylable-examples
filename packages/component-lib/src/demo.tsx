@@ -6,9 +6,9 @@ import { st, classes as demo } from './demo.st.css';
 
 import { Card } from './components/card/card';
 import { Button } from './components/button/button';
-import { classes as buttonVariants } from './components/button/variants.st.css';
 import { ImageView } from './components/image-view/image-view';
 import { Menu } from './components/menu/menu';
+import { classes as buttonVariants } from './components/button/variants.st.css';
 
 // native form elements themed variants
 import { classes as formElements } from './components/form-elements/form-element.st.css'
