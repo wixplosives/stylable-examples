@@ -7,11 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "start:prod": "webpack-dev-server --mode production --open"
+    "start": "webpack serve --open",
+    "start:prod": "webpack serve --mode production --open"
   },
   "dependencies": {
-    "@stylable/runtime": "^3.11.10",
+    "@stylable/runtime": "^3.11.13",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

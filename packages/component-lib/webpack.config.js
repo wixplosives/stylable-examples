@@ -4,6 +4,7 @@ const { noCollisionNamespace } = require('@stylable/core');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     devtool: 'source-map',
     entry: {
         main: join(__dirname, 'src', 'demo'),
@@ -47,7 +48,7 @@ module.exports = {
         },
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.mjs', '.js', '.json'],
+        extensions: ['.ts', '.tsx', '.js', '.json'],
     },
     plugins: [new HtmlWebpackPlugin(), new StylableWebpackPlugin({ resolveNamespace: noCollisionNamespace() })],
 };
