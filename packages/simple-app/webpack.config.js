@@ -9,7 +9,6 @@ module.exports = {
     entry: join(__dirname, 'src', 'client-bootstrap'),
     output: {
         path: join(__dirname, 'dist'),
-        publicPath: '/',
     },
     module: {
         rules: [
