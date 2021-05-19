@@ -15,6 +15,6 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@stylable/runtime": "^4.2.3"
+    "@stylable/runtime": "^4.2.4"
   }
 }
