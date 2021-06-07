@@ -17,15 +17,8 @@ module.exports = {
                 loader: '@ts-tools/webpack-loader',
             },
             {
-                test: (filePath) => !filePath.endsWith('.st.css') && filePath.endsWith('.css'),
-                use: ['css-loader'],
-            },
-            {
                 test: /\.(png|jpg|gif|svg|woff2|ttf)$/i,
-                loader: 'url-loader',
-                options: {
-                    limit: 2048,
-                },
+                type: 'asset',
             },
         ],
     },
