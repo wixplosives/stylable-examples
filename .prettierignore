@@ -1,0 +1,4 @@
+*.st.css
+tsconfig.json
+dist
+packages/simple-app/README.md

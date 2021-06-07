@@ -12,7 +12,7 @@
     "start:lib": "yarn workspace component-lib start",
     "typecheck": "tsc --noEmit",
     "test": "yarn typecheck && yarn lint",
-    "prettify": "npx prettier \"packages/**/*.{js,ts,tsx}\" --write"
+    "prettify": "npx prettier . --write"
   },
   "devDependencies": {
     "@stylable/core": "^4.2.5",
