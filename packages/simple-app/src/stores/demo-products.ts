@@ -1,7 +1,14 @@
+import bananaBlue from '../../assets/notebooks/banana-blue.png';
+import ferret from '../../assets/notebooks/ferret.png';
+import beach from '../../assets/notebooks/beach.png';
+import bananaRed from '../../assets/notebooks/banana-red.png';
+import swimming from '../../assets/notebooks/swimming.png';
+import tigerLady from '../../assets/notebooks/tiger-lady.png';
+
 export const demoProducts = [
     {
         productId: 'a3Bc56',
-        imageUrl: '../../assets/notebooks/banana-blue.png',
+        imageUrl: bananaBlue,
         productTitle: 'BANANA RAMA',
         modelName: 'Full Open',
         price: '$13.00',
@@ -10,7 +17,7 @@ export const demoProducts = [
     },
     {
         productId: 'cddsw1',
-        imageUrl: '../../assets/notebooks/ferret.png',
+        imageUrl: ferret,
         productTitle: 'Ferrets!',
         modelName: '21',
         price: '$10.00',
@@ -19,7 +26,7 @@ export const demoProducts = [
     },
     {
         productId: 'gdf21s',
-        imageUrl: '../../assets/notebooks/beach.png',
+        imageUrl: beach,
         productTitle: 'Sun-tan',
         modelName: 'Type 20',
         price: '$19.00',
@@ -29,7 +36,7 @@ export const demoProducts = [
     },
     {
         productId: 'ds21asf',
-        imageUrl: '../../assets/notebooks/banana-red.png',
+        imageUrl: bananaRed,
         productTitle: 'BANANA RAMA',
         modelName: 'Special red edition',
         price: '$20.00',
@@ -38,7 +45,7 @@ export const demoProducts = [
     },
     {
         productId: 'grw2as',
-        imageUrl: '../../assets/notebooks/swimming.png',
+        imageUrl: swimming,
         productTitle: 'Taking a Swim',
         modelName: 'Type Up',
         price: '$9.00',
@@ -47,7 +54,7 @@ export const demoProducts = [
     },
     {
         productId: 'siv4lem',
-        imageUrl: '../../assets/notebooks/tiger-lady.png',
+        imageUrl: tigerLady,
         productTitle: 'Tiger Lady',
         modelName: 'Fresh Jungle Boogie',
         price: '$60.00',

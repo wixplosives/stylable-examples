@@ -15,7 +15,7 @@ import { classes as formElements } from './components/form-elements/form-element
 
 const theme = (localStorage.currentTheme as 'basic' | 'raw') || 'basic';
 
-const compassUrl = '../assets/compass.jpg';
+import compassUrl from '../assets/compass.jpg';
 
 changeTheme(theme);
 
