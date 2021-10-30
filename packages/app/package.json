@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --open",
-    "start:prod": "webpack serve --mode production --open"
+    "start:prod": "webpack serve --mode production --open",
+    "build:stylable": "stc --srcDir src --outDir dist --stcss --no-cjs --unsr"
   },
   "peerDependencies": {
     "react": ">=16",

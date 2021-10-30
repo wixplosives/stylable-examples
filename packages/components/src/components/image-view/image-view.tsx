@@ -18,7 +18,6 @@ export const ImageView = React.memo(function ImageView(props: ImageViewProps) {
         className,
         ...attrs
     } = props;
-
     return (
         <img
             {...attrs}
