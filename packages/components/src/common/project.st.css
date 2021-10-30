@@ -1,7 +1,7 @@
 @namespace "Project";
 
 :import {
-    -st-from: "./modular-scale.js";
+    -st-from: "../../formatters/modular-scale.js";
     -st-named: modularScale;
 }
 

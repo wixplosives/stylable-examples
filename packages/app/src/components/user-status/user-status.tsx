@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserInfo } from '../../stores/user-store';
+import type { UserInfo } from '../../stores/user-store';
 import { st, classes } from './user-status.st.css';
 
 export interface UserStatusProps {

@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build:demo": "webpack --mode production",
-    "build:lib": "tsc"
+    "build:stylable": "stc --srcDir src --outDir dist --stcss --no-cjs --unsr"
   },
   "peerDependencies": {
     "react": ">=16",
