@@ -26,8 +26,8 @@ Each project in the `packages` directory is a stand-alone project, with its demo
 To run the projects locally:
 
 - Clone this repo
-- Run `yarn` in the repo root
-- Run `yarn start` in the target project directory
+- Run `npm i` in the repo root
+- Run `npm start` in the target project directory
 - Open `http://localhost:8080/` in your browser
 
 ## Example projects
