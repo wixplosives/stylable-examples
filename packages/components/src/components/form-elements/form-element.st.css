@@ -1,15 +1,15 @@
 :import {
     -st-from: "../../common/project.st.css";
-    -st-named:  --color-primary-main, --color-primary-contrast;
+    -st-named: --color-primary-main, --color-primary-contrast;
 }
 
 .toggle,
 .checkbox,
 .radio {
     --size: 1.5em;
-    --symbol-color: var(--color-primary-main,black);
-    --color: var(--color-primary-main,black);
-    --bg: var(--color-primary-contrast,white);
+    --symbol-color: var(--color-primary-main, black);
+    --color: var(--color-primary-main, black);
+    --bg: var(--color-primary-contrast, white);
 
     background: var(--bg);
     height: var(--size);
@@ -59,21 +59,23 @@
 }
 
 .toggle {
-    width: 3em;
+    --knob-margin: 2px;
+    width: calc(var(--size) * 2);
     border-radius: 9999px;
 }
 
 .toggle::after {
+    margin: var(--knob-margin);
     content: "";
     position: absolute;
-    width: calc(50%);
-    height: calc(100%);
-    background: var(--color);
+    width: calc(50% - var(--knob-margin) * 2);
+    height: calc(100% - var(--knob-margin) * 2);
+    background-color: var(--color);
     border-radius: 9999px;
-    transition: all 0.2s; 
+    transition: all 0.2s;
     transform: translate(0);
 }
 
 .toggle:checked::after {
-    transform: translate(100%);
+    transform: translate(calc(100% + var(--knob-margin) * 2));
 }

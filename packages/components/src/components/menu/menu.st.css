@@ -5,7 +5,7 @@
     -st-named:
         --color-primary-main,
         --color-primary-dark,
-        --color-primary-contrast, 
+        --color-primary-contrast,
         --border-primary-contrast-1;
 }
 
@@ -18,11 +18,11 @@
     flex-direction: column;
 }
 
-.root:layout(horizontal)> :not(:last-child) {
+.root:layout(horizontal) > :not(:last-child) {
     margin-right: var(--item-gap);
 }
 
-.root:layout(vertical)> :not(:last-child) {
+.root:layout(vertical) > :not(:last-child) {
     margin-bottom: var(--item-gap);
 }
 
