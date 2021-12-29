@@ -17,9 +17,9 @@
     "prettify": "npx prettier . --write"
   },
   "devDependencies": {
-    "@stylable/cli": "^4.9.4",
-    "@stylable/core": "^4.9.4",
-    "@stylable/webpack-plugin": "^4.9.4",
+    "@stylable/cli": "^4.9.5",
+    "@stylable/core": "^4.9.5",
+    "@stylable/webpack-plugin": "^4.9.5",
     "@types/node": "16",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
