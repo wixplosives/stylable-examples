@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@stylable/cli": "^4.10.2",
-    "@stylable/core": "^4.10.2",
+    "@stylable/core": "^4.10.3",
     "@stylable/webpack-plugin": "^4.10.2",
     "@types/node": "16",
     "@types/react": "^17.0.38",
