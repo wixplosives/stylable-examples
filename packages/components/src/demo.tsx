@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { ThemeBar, changeTheme } from './theme-selector';
 import { st, classes as demo } from './demo.st.css';
@@ -18,9 +18,6 @@ const theme = (localStorage.currentTheme as 'basic' | 'raw') || 'basic';
 import compassUrl from '../assets/compass.jpg';
 
 changeTheme(theme);
-
-const root = document.createElement('div');
-document.body.appendChild(root);
 
 const menuItems = [
     { title: 'Item A', url: '#' },
@@ -112,10 +109,9 @@ function ComponentsPlayground() {
     );
 }
 
-ReactDOM.render(
-    <>
+createRoot(document.body.appendChild(document.createElement('div'))).render(
+    <React.StrictMode>
         <ThemeBar theme={theme} />
         <ComponentsPlayground />
-    </>,
-    root
+    </React.StrictMode>
 );
