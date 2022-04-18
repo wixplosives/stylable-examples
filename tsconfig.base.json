@@ -34,7 +34,7 @@
       "./node_modules/@types",
       "./typings"
     ],                                                   /* Specify multiple folders that act like `./node_modules/@types`. */
-    "types": ["globals", "react/next", "react-dom/next"],/* Specify type package names to be included without being referenced in a source file. */
+    "types": ["globals"],                                /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "resolveJsonModule": true,                        /* Enable importing .json files */
     // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
