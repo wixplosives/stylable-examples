@@ -9,13 +9,13 @@
   "scripts": {
     "start": "webpack serve --open",
     "start:prod": "webpack serve --mode production --open",
-    "build:stylable": "stc --srcDir src --outDir dist --stcss --no-cjs --unsr"
+    "build:stylable": "stc --srcDir src --outDir dist --stcss --unsr"
   },
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@stylable/runtime": "^4.13.3"
+    "@stylable/runtime": "^5.0.1"
   }
 }
