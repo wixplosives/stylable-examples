@@ -10,8 +10,8 @@ interface ButtonProps {
 
 export function Button({ className, onClick, text, icon, ...attrs }: ButtonProps) {
     return (
-        <button {...attrs} className={st(classes.root, className)} onClick={onClick}>
-            {icon}
+        <button className={st(classes.root, className)} onClick={onClick} {...attrs}>
+            {icon !== undefined && <span className={classes.icon}>{icon}</span>}
             {text !== undefined && <span className={classes.text}>{text}</span>}
         </button>
     );

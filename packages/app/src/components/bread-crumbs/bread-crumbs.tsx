@@ -14,26 +14,28 @@ export interface BreadCrumbsProps {
 export const BreadCrumbs = React.memo<BreadCrumbsProps>(function BreadCrumbs(props) {
     const { items = [], className } = props;
 
-    const menuItemsViews = items.map((menuItem, index) => {
-        const isCurrent = index === items.length - 1;
-
-        if (isCurrent) {
-            return (
-                <div key={index} className={st(classes.breadCrumbItem, { isCurrent: true })}>
-                    {menuItem.title}
-                </div>
-            );
-        } else {
-            return (
-                <React.Fragment key={index}>
-                    <a className={classes.breadCrumbItem} href={menuItem.url}>
-                        {menuItem.title}
-                    </a>
-                    <div className={classes.separator}>{`>`}</div>
-                </React.Fragment>
-            );
-        }
-    });
-
-    return <div className={st(classes.root, className)}>{menuItemsViews}</div>;
+    return (
+        <div className={st(classes.root, className)}>
+            {items.map((item, index, items) => (
+                <Crumb key={index} menuItem={item} isCurrent={index === items.length - 1} />
+            ))}
+        </div>
+    );
 });
+
+/**
+ * This is an example of a component that does not have it's own root class.
+ * That's because it's a private child component of BreadCrumbs and it's existence is for code structure only.
+ */
+function Crumb({ menuItem, isCurrent }: { menuItem: BreadCrumbsItem; isCurrent: boolean }) {
+    return isCurrent ? (
+        <div className={st(classes.breadCrumbItem, { isCurrent: true })}>{menuItem.title}</div>
+    ) : (
+        <>
+            <a className={classes.breadCrumbItem} href={menuItem.url}>
+                {menuItem.title}
+            </a>
+            <div className={classes.separator}>{`>`}</div>
+        </>
+    );
+}

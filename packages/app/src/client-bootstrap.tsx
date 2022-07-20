@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
 import { ProductsCollectionPage } from './components/products-collection-page/products-collection-page';
 import { loadFonts } from './setup/load-fonts';
 import { demoProducts } from './stores/demo-products';
