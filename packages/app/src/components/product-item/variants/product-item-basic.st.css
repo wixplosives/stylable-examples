@@ -1,27 +1,21 @@
-:import {
-    -st-from: "../../../common/project.st.css";
-    -st-named: 
-        mobile,
-        desktop,
-        --color-primary,
-        --unit-m,
-        --font-xs,
-        --font-s,
-        --font-m,
-        --font-l,
-        --font-xl,
-        --font-xxl,
-        --unit-xxl,
-        --overlay-color-1,
-        --color-primary-contrast,
-        --font-family-primary,
-        --font-family-secondary;
-}
-
-:import {
-    -st-from: "../product-item.st.css";
-    -st-default: ProductItem;
-}
+@st-import [
+    mobile, 
+    desktop, 
+    --color-primary, 
+    --unit-m, 
+    --font-xs, 
+    --font-s, 
+    --font-m, 
+    --font-l,
+    --font-xl, 
+    --font-xxl, 
+    --unit-xxl, 
+    --overlay-color-1, 
+    --color-primary-contrast, 
+    --font-family-primary, 
+    --font-family-secondary
+] from "../../../common/project.st.css";
+@st-import ProductItem from "../product-item.st.css";
 
 .basicProductItem {
     -st-extends: ProductItem;

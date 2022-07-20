@@ -1,10 +1,8 @@
-@namespace "Card";
-
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-default: Project;
-    -st-named: --color-white, --shadow-1, --border-radius-1;
-}
+@st-import Project, [
+    --color-white, 
+    --shadow-1, 
+    --border-radius-1
+] from "../../common/project.st.css";
 
 .root {
     padding: 1rem;

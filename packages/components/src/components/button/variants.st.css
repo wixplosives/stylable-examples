@@ -1,24 +1,19 @@
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named:
-        --color-secondary-main,
-        --color-secondary-dark,
-        --color-secondary-contrast,
-        --border-secondary-contrast-1,
-        --color-success-main,
-        --color-success-dark,
-        --color-success-contrast;
-}
+@st-import [
+    --color-secondary-main, 
+    --color-secondary-dark, 
+    --color-secondary-contrast, 
+    --border-secondary-contrast-1, 
+    --color-success-main, 
+    --color-success-dark, 
+    --color-success-contrast
+] from "../../common/project.st.css";
 
-:import {
-    -st-from: "./button.st.css";
-    -st-default: Button;
-    -st-named:
-        --bg-color,
-        --text-color,
-        --border,
-        --bg-hover-color;
-}
+@st-import Button, [
+    --bg-color, 
+    --text-color, 
+    --border, 
+    --bg-hover-color
+] from "./button.st.css";
 
 .cancelButton {
     -st-extends: Button;

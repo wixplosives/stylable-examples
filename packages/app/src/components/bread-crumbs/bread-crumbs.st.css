@@ -1,10 +1,4 @@
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named:
-        --unit-l,
-        --color-primary-contrast,
-        --font-family-primary;
-}
+@st-import [--unit-l, --color-primary-contrast, --font-family-primary] from "../../common/project.st.css";
 
 .root {
     font-family: var(--font-family-primary);

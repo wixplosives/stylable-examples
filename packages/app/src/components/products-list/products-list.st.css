@@ -1,7 +1,4 @@
-:import {
-  -st-from: "../product-item/product-item.st.css";
-  -st-default: ProductItem;
-}
+@st-import ProductItem from "../product-item/product-item.st.css";
 
 .root {}
 

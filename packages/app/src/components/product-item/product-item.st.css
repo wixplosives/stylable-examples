@@ -1,14 +1,5 @@
-@namespace "ProductItem";
-
-:import {
-    -st-from: "../stars-rating/stars-rating.st.css";
-    -st-default: StarsRating;
-}
-
-:import {
-    -st-from: "../button/button.st.css";
-    -st-default: Button;
-}
+@st-import StarsRating from "../stars-rating/stars-rating.st.css";
+@st-import Button from "../button/button.st.css";
 
 .root {
     position: relative;

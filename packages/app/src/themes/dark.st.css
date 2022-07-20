@@ -1,22 +1,17 @@
-:import {
-    -st-from: "../common/project.st.css";
-    -st-named:
-        --color-bg,
-        --color-primary,
-        --color-primary-contrast,
-        --overlay-color-1,
-        --overlay-color-8,
-
-        --unit-l,
-
-        --pad-l,
-
-        --font-family-primary,
-        --font-family-secondary,
-        --font-m,
-        --font-l,
-        --font-xxl
-}
+@st-import [
+    --color-bg,
+    --color-primary,
+    --color-primary-contrast,
+    --overlay-color-1,
+    --overlay-color-8,
+    --unit-l,
+    --pad-l,
+    --font-family-primary,
+    --font-family-secondary,
+    --font-m,
+    --font-l,
+    --font-xxl
+] from "../common/project.st.css";
 
 /* 
     This theme overrides some of the css variables defined in the project.st.css file,

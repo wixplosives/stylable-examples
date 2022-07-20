@@ -1,7 +1,4 @@
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named: --color-primary-contrast;
-}
+@st-import [--color-primary-contrast] from "../../common/project.st.css";
 
 .root {
     -st-states: layout(enum(horizontal, vertical));

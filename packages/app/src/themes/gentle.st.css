@@ -1,17 +1,12 @@
-:import {
-    -st-from: "../common/project.st.css";
-    -st-named:
-        --color-bg,
-        --color-primary,
-        --color-primary-contrast,
-        --overlay-color-1,
-        --overlay-color-8,
-}
+@st-import [
+    --color-bg, 
+    --color-primary, 
+    --color-primary-contrast, 
+    --overlay-color-1, 
+    --overlay-color-8
+] from "../common/project.st.css";
 
-:import {
-    -st-from: "../components/products-collection-page/products-collection-page.st.css";
-    -st-default: ProductPage;
-}
+@st-import ProductPage from "../components/products-collection-page/products-collection-page.st.css";
 
 :vars {
     brownish: rgb(70, 57, 57);
@@ -26,6 +21,7 @@
 }
 
 @st-scope .root {
+
     /* 
         Due to the color palette used in this theme additional component overrides 
         were required in order to achieve the desired look.
