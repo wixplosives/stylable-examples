@@ -1,14 +1,10 @@
 import React from 'react';
 import { classes as project, vars } from './common/project.st.css';
 import { classes as basic } from './themes/basic.st.css';
-// import { classes as dark } from './themes/dark.st.css';
-// import { classes as gentle } from './themes/gentle.st.css';
 
 const themes = {
     raw: [project.root],
     basic: [project.root, basic.root],
-    // dark: [project.root, basic.root, dark.root],
-    // gentle: [project.root, basic.root, gentle.root]
 };
 
 export function changeTheme(name: keyof typeof themes) {
