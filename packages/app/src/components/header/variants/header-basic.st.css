@@ -1,21 +1,15 @@
-:import {
-    -st-from: "../../../common/project.st.css";
-    -st-named:
-        mobile,
-        desktop,
-        --font-family-primary,
-        --color-primary-contrast,
-        --unit-xxl,
-        --unit-l,
-        --pad-s,
-        --pad-m,
-        --font-m;
-}
-
-:import {
-    -st-from: "../header.st.css";
-    -st-default: Header;
-}
+@st-import [
+    mobile,
+    desktop,
+    --font-family-primary,
+    --color-primary-contrast,
+    --unit-xxl,
+    --unit-l,
+    --pad-s,
+    --pad-m,
+    --font-m
+] from "../../../common/project.st.css";
+@st-import Header from "../header.st.css";
 
 .header {
     -st-extends: Header;

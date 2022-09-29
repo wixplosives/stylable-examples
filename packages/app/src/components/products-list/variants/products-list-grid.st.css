@@ -1,12 +1,5 @@
-:import {
-  -st-from: "../../../common/project.st.css";
-  -st-named: mobile;
-}
-
-:import {
-  -st-from: "../products-list.st.css";
-  -st-default: ProductsList;
-}
+@st-import [mobile] from "../../../common/project.st.css";
+@st-import ProductsList from "../products-list.st.css";
 
 .productGrid {
   -st-extends: ProductsList;
@@ -21,7 +14,7 @@
     grid-template-columns: 1fr;
   }
 
-  .root> :not(:last-child) {
+  .root > :not(:last-child) {
     margin-bottom: 2rem;
   }
 }

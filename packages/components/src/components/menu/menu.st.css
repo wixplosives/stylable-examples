@@ -1,13 +1,9 @@
-@namespace "Menu";
-
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named:
-        --color-primary-main,
-        --color-primary-dark,
-        --color-primary-contrast,
-        --border-primary-contrast-1;
-}
+@st-import [
+    --color-primary-main, 
+    --color-primary-dark, 
+    --color-primary-contrast, 
+    --border-primary-contrast-1
+] from "../../common/project.st.css";
 
 .root {
     -st-states: layout(enum(horizontal, vertical));

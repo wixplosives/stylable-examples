@@ -1,9 +1,9 @@
 import React from 'react';
-import { CommonClasses } from '../../common/common-classes';
 import { Button } from '../button/button';
 import { ImageView } from '../image-view/image-view';
-import { classes, st } from './product-item.st.css';
 import { StarsRating } from '../stars-rating/stars-rating';
+import { classes as common } from '../../common/common-classes.st.css';
+import { classes, st } from './product-item.st.css';
 
 export interface AppProductItemProps extends React.HTMLAttributes<HTMLDivElement> {
     imageUrl: string;
@@ -45,7 +45,7 @@ export const AppProductItem = React.memo<AppProductItemProps>(function AppProduc
     return (
         <div {...htmlAttributes} className={st(classes.root, className)}>
             <div className={classes.sectionMain}>
-                <a href={productUrl} className={st(classes.imageLink, CommonClasses.resetAnchor)}>
+                <a href={productUrl} className={st(classes.imageLink, common.resetAnchor)}>
                     <ImageView
                         src={imageUrl}
                         className={classes.productImage}
@@ -85,7 +85,7 @@ interface ProductInfoProps {
 function ProductInfo({ modelName, price, productUrl, productTitle, rating, reviewsCount }: ProductInfoProps) {
     return (
         <div className={classes.productInfo}>
-            <a href={productUrl} className={st(classes.title, CommonClasses.resetAnchor)}>
+            <a href={productUrl} className={st(classes.title, common.resetAnchor)}>
                 {productTitle}
             </a>
             <div className={classes.priceLabel}>{price}</div>

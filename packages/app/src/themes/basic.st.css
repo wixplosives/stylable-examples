@@ -1,34 +1,12 @@
-:import {
-    -st-from: "../components/product-item/product-item.st.css";
-    -st-default: ProductItem; /* ProductItem component */
-}
-
-:import {
-    -st-from: "../components/product-item/variants/product-item-basic.st.css";
-    -st-named: basicProductItem; /* ProductItem component variant */
-}
-
-:import {
-    -st-from: "../components/header/header.st.css";
-    -st-default: Header; /* Header component */
-}
-
-:import {
-    -st-from: "../components/header/variants/header-basic.st.css";
-    -st-named: header; /* Header component variant */
-}
-
-:import {
-    -st-from: "../components/products-list/products-list.st.css";
-    -st-default: ProductsList; /* ProductList component */
-}
-
-:import {
-    -st-from: "../components/products-list/variants/products-list-grid.st.css";
-    -st-named: productGrid; /* ProductList component variant */
-}
+@st-import ProductItem from "../components/product-item/product-item.st.css";
+@st-import [basicProductItem] from "../components/product-item/variants/product-item-basic.st.css";
+@st-import Header from "../components/header/header.st.css";
+@st-import [header] from "../components/header/variants/header-basic.st.css";
+@st-import ProductsList from "../components/products-list/products-list.st.css";
+@st-import [productGrid] from "../components/products-list/variants/products-list-grid.st.css";
 
 @st-scope .root {
+
     /* 
         This theme customizes specific components by mixing in a designed varient of the component
     */
@@ -42,5 +20,5 @@
 
     ProductsList {
         -st-mixin: productGrid;
-    }   
+    }
 }

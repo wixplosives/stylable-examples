@@ -1,7 +1,7 @@
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named: --font-family-secondary, --color-primary-contrast;
-}
+@st-import [
+    --font-family-secondary, 
+    --color-primary-contrast
+] from "../../common/project.st.css";
 
 .root {
     font-family: var(--font-family-secondary);

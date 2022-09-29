@@ -1,37 +1,9 @@
-@namespace "Header";
-
-:import {
-    -st-from: "../../common/project.st.css";
-    -st-named:
-        mobile,
-        desktop,
-        --color-primary-contrast;
-}
-
-:import {
-    -st-from: "../mobile-menu/mobile-menu.st.css";
-    -st-default: MobileMenu;
-}
-
-:import {
-    -st-from: "../logo/logo.st.css";
-    -st-default: Logo;
-}
-
-:import {
-    -st-from: "../menu/menu.st.css";
-    -st-default: Menu;
-}
-
-:import {
-    -st-from: "../user-status/user-status.st.css";
-    -st-default: UserStatus;
-}
-
-:import {
-    -st-from: "../shopping-cart/shopping-cart.st.css";
-    -st-default: ShoppingCart;
-}
+@st-import [mobile, desktop, --color-primary-contrast] from "../../common/project.st.css";
+@st-import MobileMenu from "../mobile-menu/mobile-menu.st.css";
+@st-import Logo from "../logo/logo.st.css";
+@st-import Menu from "../menu/menu.st.css";
+@st-import UserStatus from "../user-status/user-status.st.css";
+@st-import ShoppingCart from "../shopping-cart/shopping-cart.st.css";
 
 .root {}
 
@@ -78,6 +50,7 @@
 }
 
 @media value(mobile) {
+
     .userStatus,
     .menu {
         display: none !important;
