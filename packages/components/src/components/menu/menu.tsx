@@ -16,7 +16,7 @@ export const Menu = React.memo(function Menu(props: MenuProps) {
     const { menuItems = [], layout, className } = props;
 
     return (
-        <div className={st(classes.root, { layout }, className)}>
+        <nav className={st(classes.root, { layout }, className)}>
             {menuItems.map((menuItem, index) => {
                 return (
                     <a key={index} className={classes.menuItem} href={menuItem.url}>
@@ -24,6 +24,6 @@ export const Menu = React.memo(function Menu(props: MenuProps) {
                     </a>
                 );
             })}
-        </div>
+        </nav>
     );
 });

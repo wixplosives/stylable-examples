@@ -57,6 +57,9 @@
     /* border-radius */
     --border-radius-1: 3px;
     --border-radius-2: 6px;
+
+    /* font-family */
+    --font-family-primary: Helvetica, Arial, sans-serif;
 }
 
 @st-scope .root {

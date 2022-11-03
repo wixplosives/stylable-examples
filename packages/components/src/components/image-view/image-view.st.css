@@ -1,8 +1,5 @@
 .root {
-    --objectFit: none;
-    --objectPositionVertical: top;
-    --objectPositionHorizontal: left;
-    object-fit: var(--objectFit);
-    object-position: var(--objectPositionVertical) var(--objectPositionHorizontal);
+    object-fit: var(--objectFit, none);
+    object-position: var(--objectPositionVertical, top) var(--objectPositionHorizontal, left);
     max-width: 100%;
 }
