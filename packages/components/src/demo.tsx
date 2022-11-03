@@ -8,6 +8,7 @@ import { Card } from './components/card/card';
 import { Button } from './components/button/button';
 import { ImageView } from './components/image-view/image-view';
 import { Menu } from './components/menu/menu';
+import { RangeSlider } from './components/range-slider/range-slider';
 import { classes as buttonVariants } from './components/button/variants.st.css';
 
 // native form elements themed variants
@@ -89,13 +90,24 @@ function ComponentsPlayground() {
                 </Card>
             </div>
 
-            <h2>Form Elements</h2>
-            <input type="checkbox" className={formElements.checkbox} />
-            <input type="checkbox" className={formElements.checkbox} disabled />
-            <input type="radio" className={formElements.radio} name="radio" />
-            <input type="radio" className={formElements.radio} name="radio" />
-            <input type="checkbox" className={formElements.toggle} />
-            <input type="checkbox" className={formElements.toggle} disabled />
+            <fieldset>
+                <legend>Range Slider</legend>
+                <RangeSlider />
+            </fieldset>
+
+            <fieldset>
+                <legend>Form Elements</legend>
+                <input aria-label="regular checkbox" type="checkbox" className={formElements.checkbox} />
+                <input aria-label="disabled checkbox" type="checkbox" className={formElements.checkbox} disabled />
+                <input aria-label="regular toggle switch" type="checkbox" className={formElements.toggle} />
+                <input aria-label="disabled toggle switch" type="checkbox" className={formElements.toggle} disabled />
+            </fieldset>
+            <fieldset>
+                <legend>Radio Buttons</legend>
+                <input aria-label="demo option A" type="radio" className={formElements.radio} name="radio" />
+                <input aria-label="demo option B" type="radio" className={formElements.radio} name="radio" />
+                <input aria-label="demo option C" type="radio" disabled className={formElements.radio} name="radio" />
+            </fieldset>
 
             <h2>Typography</h2>
             <h1>H1 Heading</h1>

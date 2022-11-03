@@ -19,6 +19,7 @@ export function ThemeBar({ theme }: { theme: string }) {
         <div style={{ padding: 10, fontFamily: `var(${vars['font-family-primary']})` }}>
             <span>Theme: </span>
             <select
+                aria-label='Theme Selector'
                 defaultValue={theme}
                 style={{ padding: 10 }}
                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>

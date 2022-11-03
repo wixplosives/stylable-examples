@@ -1,0 +1,44 @@
+@st-import Project, [
+    --color-white, 
+    --shadow-1, 
+    --border-radius-1
+] from "../../common/project.st.css";
+
+@custom-selector :--thumb ::-webkit-slider-thumb,
+::-moz-range-thumb,
+::-ms-thumb;
+@custom-selector :--track ::-webkit-slider-runnable-track,
+::-moz-range-track,
+::-ms-track;
+
+.root {}
+
+.slider {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    background: linear-gradient(blue, #ff4500) no-repeat 70% 100%;
+}
+
+.slider:--thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    /* background: red; */
+    /* cursor: ew-resize; */
+}
+
+.slider:--track {
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
