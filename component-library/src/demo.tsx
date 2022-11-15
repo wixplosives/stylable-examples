@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { ThemeBar, changeTheme } from './theme-selector';
-// import { st, classes as demo } from './demo.st.css';
+import { st, classes as demo } from './demo.st.css';
 
 import { Card } from './components/card/card';
 import { Button } from './components/button/button';
