@@ -1,9 +1,10 @@
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 
-const DEFAULT_PROJECTS_ORDER = ['component-library', 'simple-spa-app'];
+const DEFAULT_PROJECTS_ORDER = ensureExistenceOfProjects(['component-library', 'simple-spa-app', 'app-with-library']);
 
 const [commandInput, ...projects] = process.argv.slice(2);
-const commands = commandInput?.split('+') ?? [];
+const commands = commandInput?.split('+') ?? []; // e.g. "install+build" -> ["install", "build"]
 const projectsBuildOrder = projects.length ? projects : DEFAULT_PROJECTS_ORDER;
 
 if (!commands.length) {
@@ -26,7 +27,12 @@ const operations = {
 };
 
 for (const command of commands) {
-  (await operations[command]?.()) ?? console.log(redColor(`[Error] Unknown command: ${command}`));
+  const op = operations[command];
+  if (op) {
+    await op();
+  } else {
+    console.log(redColor(`[Error] Unknown command: ${command}`));
+  }
 }
 
 async function operateOnEach(projects, op) {
@@ -54,4 +60,12 @@ function greenColor(str) {
 
 function redColor(str) {
   return `\x1b[31m${str}\x1b[0m`;
+}
+
+function ensureExistenceOfProjects(projects) {
+  const missingProjects = projects.filter((project) => !existsSync(project));
+  if (missingProjects.length > 0) {
+    throw new Error(`The following projects are missing: ${missingProjects.join(', ')}`);
+  }
+  return projects;
 }

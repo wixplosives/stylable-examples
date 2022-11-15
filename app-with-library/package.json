@@ -1,7 +1,7 @@
 {
-  "name": "component-library",
+  "name": "simple-spa-app",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": "git@github.com:wixplosives/stylable-examples.git",
   "author": "Wix.com",
   "license": "MIT",
@@ -10,14 +10,12 @@
     "start": "webpack serve --open",
     "build": "tsc && npm run build:stylable && npm run build:webpack",
     "build:webpack": "webpack --mode production",
-    "build:stylable": "stc --srcDir src --outDir dist --stcss --unsr"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "start:prod": "webpack serve --mode production --open",
+    "build:stylable": "stc --srcDir src --outDir dist --stcss --unsr",
+    "watch:ts": "tsc -w"
   },
   "dependencies": {
-    "@stylable/runtime": "^5.3.0"
+    "component-library": "file:../component-library"
   },
   "devDependencies": {
     "@stylable/cli": "^5.2.1",

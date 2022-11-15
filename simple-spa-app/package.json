@@ -13,13 +13,6 @@
     "start:prod": "webpack serve --mode production --open",
     "build:stylable": "stc --srcDir src --outDir dist --stcss --unsr"
   },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
-  },
-  "dependencies": {
-    "@stylable/runtime": "^5.3.0"
-  },
   "devDependencies": {
     "@stylable/cli": "^5.2.1",
     "@stylable/webpack-plugin": "^5.2.1",
