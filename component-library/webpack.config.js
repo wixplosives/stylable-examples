@@ -2,12 +2,19 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
+const path = require('path');
 
 /** @type import('webpack').Configuration */
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
     context: __dirname,
+    entry: {
+        main: require.resolve('./dist/demo.js'),
+    },
+    output: {
+        path: path.join(__dirname, 'dist-demo'),
+    },
     module: {
         rules: [
             {
