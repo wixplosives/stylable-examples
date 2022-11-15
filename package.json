@@ -5,7 +5,9 @@
   "description": "[![Build Status](https://github.com/wixplosives/stylable-examples/workflows/tests/badge.svg)](https://github.com/wixplosives/stylable-examples/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node scripts.mjs install+build",
+    "build": "node scripts.mjs build",
+    "install": "node scripts.mjs install"
   },
   "repository": {
     "type": "git",

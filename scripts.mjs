@@ -26,7 +26,7 @@ const operations = {
 };
 
 for (const command of commands) {
-  operations[command]?.() ?? console.log(redColor(`[Error] Unknown command: ${command}`));
+  (await operations[command]?.()) ?? console.log(redColor(`[Error] Unknown command: ${command}`));
 }
 
 async function operateOnEach(projects, op) {
