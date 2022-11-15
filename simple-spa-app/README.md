@@ -103,15 +103,8 @@ As you can see in this project, it can also be a way to create a specific design
 This design is then applied in the `./src/themes/basic/basic.st.css` theme as a mixin for the `ProductItem` component. For example:
 
 ```css
-:import {
-    -st-from: "../components/product-item/product-item.st.css";
-    -st-default: ProductItem;
-}
-
-:import {
-    -st-from: "../components/product-item/variants/product-item-basic.st.css";
-    -st-named: basicProductItem;
-}
+@st-import ProductItem from "../components/product-item/product-item.st.css";
+@st-import [basicProductItem] from "../components/product-item/variants/product-item-basic.st.css";
 
 @st-scope .root {
     ProductItem {
