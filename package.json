@@ -1,43 +1,23 @@
 {
+  "private": true,
   "name": "stylable-examples",
-  "workspaces": [
-    "packages/*"
-  ],
+  "version": "1.0.0",
+  "description": "[![Build Status](https://github.com/wixplosives/stylable-examples/workflows/tests/badge.svg)](https://github.com/wixplosives/stylable-examples/actions)",
+  "main": "index.js",
   "scripts": {
-    "clean": "rimraf \"./packages/*/dist\"",
-    "build": "npm run build:typescript && npm run build:stylable",
-    "build:typescript": "tsc --build",
-    "build:stylable": "npm run -ws build:stylable",
-    "lint": "eslint .",
-    "prestart": "npm run build",
-    "start": "npm run start:app",
-    "start:app": "npm run -w simple-app start",
-    "start:components": "npm run -w component-lib start",
-    "test": "npm run lint && npm run build",
-    "prettify": "npx prettier . --write"
+    "test": "node scripts.mjs install+build",
+    "build": "node scripts.mjs build",
+    "install": "node scripts.mjs install"
   },
-  "devDependencies": {
-    "@stylable/cli": "^5.3.0",
-    "@stylable/webpack-plugin": "^5.3.0",
-    "@types/node": "16",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
-    "@typescript-eslint/parser": "^5.42.0",
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "html-webpack-plugin": "^5.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rimraf": "^3.0.2",
-    "source-map-loader": "^4.0.1",
-    "typescript": "~4.8.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wixplosives/stylable-examples.git"
   },
-  "license": "MIT",
-  "private": true
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wixplosives/stylable-examples/issues"
+  },
+  "homepage": "https://github.com/wixplosives/stylable-examples#readme"
 }
