@@ -1,8 +1,11 @@
 import { execSync } from 'node:child_process';
 import { existsSync, rmSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-process.chdir(__dirname);
+const workingDir = fileURLToPath(new URL('.', import.meta.url));
+
+process.chdir(workingDir);
 
 const DEFAULT_PROJECTS_ORDER = ensureExistenceOfProjects(['component-library', 'simple-spa-app', 'app-with-library']);
 

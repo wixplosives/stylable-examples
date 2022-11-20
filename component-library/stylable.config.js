@@ -16,6 +16,12 @@ module.exports.stcConfig = typedConfiguration({
                 dts: true,
                 dtsSourceMap: true,
             },
+            {
+                srcDir: 'src',
+                outDir: 'st-types',
+                dts: true,
+                dtsSourceMap: true,
+            },
         ],
     },
     projectsOptions: {
