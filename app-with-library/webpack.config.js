@@ -10,23 +10,47 @@ module.exports = {
     devtool: 'source-map',
     context: __dirname,
     entry: {
-        main: require.resolve('./dist/client-bootstrap.js'),
+        main: require.resolve('./src/index.tsx'),
     },
     output: {
         path: path.join(__dirname, 'dist-app'),
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js'],
+        extensionAlias: {
+            '.js': ['.js', '.ts'],
+            '.cjs': ['.cjs', '.cts'],
+            '.mjs': ['.mjs', '.mts'],
+        },
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                enforce: 'pre',
-                loader: 'source-map-loader',
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif|svg)$/,
-                type: 'asset',
+                test: /\.tsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'swc-loader',
+                    options: {
+                        jsc: {
+                            transform: {
+                                react: {
+                                    runtime: 'automatic',
+                                },
+                            },
+                            parser: {
+                                syntax: 'typescript',
+                            },
+                        },
+                    },
+                },
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin(), new StylableWebpackPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new StylableWebpackPlugin({
+            depthStrategy: 'css',
+            stcConfig: require.resolve('./stylable.config.js'),
+        }),
+    ],
 };

@@ -1,10 +1,8 @@
 import type { ChangeEvent } from 'react';
-import { classes as project, vars } from '../common/project.st.css';
-import { classes as basic } from '../themes/basic.st.css';
+import { project } from 'component-library';
 
 const themes = {
     raw: [project.root],
-    basic: [project.root, basic.root],
 };
 
 export function changeTheme(name: keyof typeof themes) {
@@ -16,7 +14,7 @@ export function changeTheme(name: keyof typeof themes) {
 
 export function ThemeBar({ theme }: { theme: string }) {
     return (
-        <div style={{ padding: 10, fontFamily: `var(${vars['font-family-primary']})` }}>
+        <div style={{ padding: 10, fontFamily: 'monospace' }}>
             <span>Theme: </span>
             <select
                 defaultValue={theme}

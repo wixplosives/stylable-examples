@@ -32,6 +32,11 @@ module.exports = {
                     loader: 'swc-loader',
                     options: {
                         jsc: {
+                            transform: {
+                                react: {
+                                    runtime: 'automatic',
+                                },
+                            },
                             parser: {
                                 syntax: 'typescript',
                             },
@@ -39,17 +44,13 @@ module.exports = {
                     },
                 },
             },
-            {
-                test: /\.(png|jpg|jpeg|gif|svg)$/,
-                type: 'asset',
-            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin(),
         new StylableWebpackPlugin({
             depthStrategy: 'css',
-            stcConfig: require.resolve('./stylable.config.dev.js'),
+            stcConfig: require.resolve('./stylable.config.js'),
         }),
     ],
 };

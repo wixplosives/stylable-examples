@@ -11,8 +11,8 @@
     "start": "webpack serve --open",
     "build": "npm run build:stylable && tsc && npm run build:webpack",
     "build:webpack": "webpack --mode production",
-    "build:stylable": "stc",
-    "stylable:types": "stc --config ./stylable.config.dev.js"
+    "build:stylable": "stc --config ./stylable.config.build.js",
+    "stylable:types": "stc --config ./stylable.config.js"
   },
   "peerDependencies": {
     "react": ">=16",
