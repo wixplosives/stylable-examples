@@ -1,25 +1,4 @@
-@st-import [modularScale] from "../../formatters/modular-scale.js";
-
-/* simple reset */
-:global(html),
-:global(body) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-}
-
-:global(*),
-:global(*:before),
-:global(*:after) {
-    box-sizing: inherit;
-    color: inherit;
-}
-
-:global(button) {
-    background: transparent;
-    border: 0;
-}
+@st-import [modularScale] from "../../formatters/modular-scale.cjs";
 
 :vars {
     mobile: "only screen and (max-width: 750px)";
@@ -70,6 +49,24 @@
 }
 
 @st-scope .root {
+
+    /* simple reset */
+    html,
+    body {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        color: inherit;
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+    }
 
     h1,
     h2,

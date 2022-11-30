@@ -1,6 +1,12 @@
-import { Card, Button, ImageView, Menu, buttonVariants, formElements } from 'component-library';
+import { base, Card, Button, ImageView, Menu, buttonVariants, formElements } from 'component-library';
+import "component-library/";
+import { st, classes as demo } from './app.st.css.js';
 
-import { st, classes as demo } from './app.st.css';
+const themes = {
+    raw: [],
+    base: [base.root],
+    default: [base.root, ],
+};
 
 const stylableLogo = new URL('./assets/96-logo-OnlySymbol@2x.png', import.meta.url).href;
 
@@ -55,11 +61,11 @@ export function App() {
             </div>
             <h2>Menu</h2>
             <div className={demo.box}>
-                <Menu menuItems={menuItems} layout="horizontal" />
+                <Menu items={menuItems} layout="horizontal" />
             </div>
             <br />
             <div className={demo.box}>
-                <Menu menuItems={menuItems} layout="vertical" />
+                <Menu items={menuItems} layout="vertical" />
             </div>
             <h2>Card</h2>
             <div className={demo.box}>

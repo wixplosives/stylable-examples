@@ -1,9 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { project } from 'component-library';
 
-const themes = {
-    raw: [project.root],
-};
 
 export function changeTheme(name: keyof typeof themes) {
     if (themes[name]) {

@@ -1,7 +1,7 @@
 @st-import [
     --color-primary-main, 
     --color-primary-contrast
-] from "../../common/project.st.css";
+] from "../../common/base.st.css";
 
 .toggle,
 .checkbox,

@@ -1,8 +1,10 @@
 # Components Library - Example
 
+
+
 ## Example highlights
 
-- Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `project.st.css` file, creating a unified look for the library.
+- Generic demo components (`Button`, `ImageView`, `Menu` and `Card`) written using a common `base.st.css` file, creating a unified look for the library.
 - All components define and wire internal CSS vars to the `project` ones, allowing easy customization of all components, or a specific one through a theme or override.
 - The library comes with a base `raw` look, including the minimal CSS required for the components to function, and a `Basic` theme giving them a styled look ready for use.
 

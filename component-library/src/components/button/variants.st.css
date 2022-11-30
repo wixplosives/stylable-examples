@@ -6,7 +6,7 @@
     --color-success-main, 
     --color-success-dark, 
     --color-success-contrast
-] from "../../common/project.st.css";
+] from "../../common/base.st.css";
 
 @st-import Button, [
     --bg-color, 

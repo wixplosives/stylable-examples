@@ -2,6 +2,7 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
 /** @type import('webpack').Configuration */
@@ -22,6 +23,17 @@ module.exports = {
             '.cjs': ['.cjs', '.cts'],
             '.mjs': ['.mjs', '.mts'],
         },
+        alias: {
+            ...Object.fromEntries(
+                Object.entries(require('./package.json').dependencies).map(([name]) => {
+                    return [name, require('path').dirname(require.resolve(name + '/package.json'))];
+                })
+            ),
+        },
+    },
+    stats: {
+        // Display bailout reasons
+        optimizationBailout: true,
     },
     module: {
         rules: [
@@ -47,6 +59,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new BundleAnalyzerPlugin({}),
         new HtmlWebpackPlugin(),
         new StylableWebpackPlugin({
             depthStrategy: 'css',

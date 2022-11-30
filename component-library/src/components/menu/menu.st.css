@@ -3,7 +3,7 @@
     --color-primary-dark, 
     --color-primary-contrast, 
     --border-primary-contrast-1
-] from "../../common/project.st.css";
+] from "../../common/base.st.css";
 
 .root {
     -st-states: layout(enum(horizontal, vertical));
@@ -22,7 +22,7 @@
     margin-bottom: var(--item-gap);
 }
 
-.menuItem {
+.item {
     padding: var(--item-padding, 1rem);
     text-align: center;
     text-decoration: none;
@@ -36,6 +36,6 @@
     color: var(--item-text-color, inherit);
 }
 
-.menuItem:hover {
+.item:hover {
     background-color: var(--bg-hover-color, rgba(0, 0, 0, 0.1));
 }

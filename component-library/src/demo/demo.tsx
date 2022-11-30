@@ -1,23 +1,20 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { ThemeBar, changeTheme } from './theme-selector';
-import { st, classes as demo } from './demo.st.css';
+import { st, classes as demo } from './demo.st.css.js';
 
-import { Card } from '../components/card/card';
-import { Button } from '../components/button/button';
-import { ImageView } from '../components/image-view/image-view';
-import { Menu } from '../components/menu/menu';
-import { classes as buttonVariants } from '../components/button/variants.st.css';
+import { Card } from '../components/card/card.js';
+import { Button } from '../components/button/button.js';
+import { ImageView } from '../components/image-view/image-view.js';
+import { Menu } from '../components/menu/menu.js';
+import { ThemeBar } from '../components/theme-selector/theme-selector.js';
 
-// native form elements themed variants
-import { classes as formElements } from '../components/form-elements/form-element.st.css';
-
-const theme = (localStorage.currentTheme as 'basic' | 'raw') || 'basic';
+import { classes as base } from '../common/base.st.css.js';
+import { classes as buttonVariants } from '../components/button/variants.st.css.js';
+import { classes as formElements } from '../components/form-elements/form-element.st.css.js';
+import { classes as defaultTheme } from '../themes/default-theme.st.css.js';
 
 const stylableLogo = new URL('./assets/96-logo-OnlySymbol@2x.png', import.meta.url).href;
-
-changeTheme(theme);
 
 const menuItems = [
     { title: 'Item A', url: '#' },
@@ -70,11 +67,11 @@ function ComponentsPlayground() {
             </div>
             <h2>Menu</h2>
             <div className={demo.box}>
-                <Menu menuItems={menuItems} layout="horizontal" />
+                <Menu items={menuItems} layout="horizontal" />
             </div>
             <br />
             <div className={demo.box}>
-                <Menu menuItems={menuItems} layout="vertical" />
+                <Menu items={menuItems} layout="vertical" />
             </div>
             <h2>Card</h2>
             <div className={demo.box}>
@@ -111,7 +108,12 @@ function ComponentsPlayground() {
 
 createRoot(document.body.appendChild(document.createElement('div'))).render(
     <React.StrictMode>
-        <ThemeBar theme={theme} />
+        <ThemeBar
+            themes={{
+                raw: [base.root],
+                default: [base.root, defaultTheme.root],
+            }}
+        />
         <ComponentsPlayground />
     </React.StrictMode>
 );

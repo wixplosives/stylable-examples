@@ -1,5 +1,5 @@
 import type React from 'react';
-import { st, classes } from './button.st.css';
+import { st, classes } from './button.st.css.js';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
