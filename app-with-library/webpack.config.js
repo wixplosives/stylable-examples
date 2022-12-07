@@ -23,17 +23,7 @@ module.exports = {
             '.cjs': ['.cjs', '.cts'],
             '.mjs': ['.mjs', '.mts'],
         },
-        alias: {
-            ...Object.fromEntries(
-                Object.entries(require('./package.json').dependencies).map(([name]) => {
-                    return [name, require('path').dirname(require.resolve(name + '/package.json'))];
-                })
-            ),
-        },
-    },
-    stats: {
-        // Display bailout reasons
-        optimizationBailout: true,
+        alias: useLocalPackages(),
     },
     module: {
         rules: [
@@ -59,7 +49,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new BundleAnalyzerPlugin({}),
         new HtmlWebpackPlugin(),
         new StylableWebpackPlugin({
             depthStrategy: 'css',
@@ -67,3 +56,18 @@ module.exports = {
         }),
     ],
 };
+
+if (process.env.ANALYZE_BUILD !== undefined) {
+    module.exports.plugins?.push(new BundleAnalyzerPlugin({}));
+    module.exports.stats = {
+        optimizationBailout: true,
+    };
+}
+
+function useLocalPackages() {
+    return Object.fromEntries(
+        Object.entries(require('./package.json').dependencies).map(([name]) => {
+            return [name, path.join(__dirname, 'node_modules', name)];
+        })
+    );
+}
