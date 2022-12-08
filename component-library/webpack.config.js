@@ -2,8 +2,8 @@
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { StylableWebpackPlugin } from '@stylable/webpack-plugin';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const context = path.dirname(fileURLToPath(import.meta.url));
 /** @type import('webpack').Configuration */

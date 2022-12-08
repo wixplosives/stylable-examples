@@ -48,7 +48,7 @@
     --font-xxl: 24px;
 }
 
-@st-scope .root {
+@st-scope * {
 
     /* simple reset */
     html,

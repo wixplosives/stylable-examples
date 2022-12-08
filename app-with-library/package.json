@@ -6,13 +6,14 @@
   "author": "Wix.com",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "webpack serve --open",
     "build": "npm run build:app",
     "build:app": "webpack --mode production"
   },
   "dependencies": {
-    "component-library": "file:../component-library",
+    "component-library": "file:../component-library/component-library-1.0.0.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

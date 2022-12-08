@@ -1,35 +1,36 @@
 // @ts-check
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { StylableWebpackPlugin } from '@stylable/webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const path = require('path');
+const context = dirname(fileURLToPath(import.meta.url));
 
 /** @type import('webpack').Configuration */
-module.exports = {
+const config = {
     mode: 'development',
     devtool: 'source-map',
-    context: __dirname,
+    context,
     entry: {
-        main: require.resolve('./src/index.tsx'),
+        main: './src/index.tsx',
     },
     output: {
-        path: path.join(__dirname, 'dist-app'),
+        path: join(context, 'dist-app'),
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         extensionAlias: {
-            '.js': ['.js', '.ts'],
+            '.js': ['.js', '.tsx', '.ts'],
             '.cjs': ['.cjs', '.cts'],
             '.mjs': ['.mjs', '.mts'],
         },
-        alias: useLocalPackages(),
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'swc-loader',
                     options: {
@@ -52,22 +53,16 @@ module.exports = {
         new HtmlWebpackPlugin(),
         new StylableWebpackPlugin({
             depthStrategy: 'css',
-            stcConfig: require.resolve('./stylable.config.js'),
+            stcConfig: join(context, 'stylable.config.cjs'),
         }),
     ],
 };
 
 if (process.env.ANALYZE_BUILD !== undefined) {
-    module.exports.plugins?.push(new BundleAnalyzerPlugin({}));
-    module.exports.stats = {
+    config.plugins?.push(new BundleAnalyzerPlugin({}));
+    config.stats = {
         optimizationBailout: true,
     };
 }
 
-function useLocalPackages() {
-    return Object.fromEntries(
-        Object.entries(require('./package.json').dependencies).map(([name]) => {
-            return [name, path.join(__dirname, 'node_modules', name)];
-        })
-    );
-}
+export default config;
