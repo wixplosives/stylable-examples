@@ -1,11 +1,14 @@
-import { base, Card, Button, ImageView, Menu, buttonVariants, formElements, ThemeBar } from 'component-library';
-import * as defaultTheme from 'component-library/themes/default';
-import { st, classes as demo } from './app.st.css.js';
+import { Button } from 'component-library/button';
+import { Card } from 'component-library/card';
+import { ImageView } from 'component-library/image-view';
+import { Menu } from 'component-library/menu';
+import { ThemeBar } from 'component-library/themes-selector';
 
-const themes = {
-    raw: [base.root],
-    default: [base.root, defaultTheme.classes.root],
-};
+import { classes as buttonVariants } from 'component-library/button-variants';
+import { classes as formElements } from 'component-library/form-elements';
+import { classes as defaultTheme } from 'component-library/themes/default';
+
+import { st, classes as demo } from './app.st.css.js';
 
 const stylableLogo = new URL('./assets/96-logo-OnlySymbol@2x.png', import.meta.url).href;
 
@@ -19,7 +22,12 @@ const menuItems = [
 export function App() {
     return (
         <>
-            <ThemeBar themes={themes} />
+            <ThemeBar
+                themes={{
+                    raw: [],
+                    default: [defaultTheme.root],
+                }}
+            />
 
             <div className={demo.root}>
                 <h1>Components Demo</h1>

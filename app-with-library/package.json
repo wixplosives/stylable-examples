@@ -13,7 +13,7 @@
     "build:app": "webpack --mode production"
   },
   "dependencies": {
-    "component-library": "file:../component-library/component-library-1.0.0.tgz",
+    "component-library": "file:../component-library",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

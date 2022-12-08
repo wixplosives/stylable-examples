@@ -6,7 +6,7 @@ module.exports.stcConfig = typedConfiguration({
       {
         srcDir: 'src',
         outDir: 'dist',
-        bundle: 'cl.css',
+        bundle: 'all.css',
         esm: true,
         esmExt: '.js',
         includeCSSInJS: true,

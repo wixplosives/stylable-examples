@@ -8,13 +8,20 @@
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
-    "./themes/default": "./dist/themes/default-theme.st.css.js"
+    "./themes/default": "./dist/themes/default-theme.st.css.js",
+    "./button": "./dist/components/button/button.js",
+    "./card": "./dist/components/card/card.js",
+    "./form-elements": "./dist/components/form-elements/form-element.st.css.js",
+    "./image-view": "./dist/components/image-view/image-view.js",
+    "./menu": "./dist/components/menu/menu.js",
+    "./themes-selector": "./dist/components/theme-selector/theme-selector.js",
+    "./button-variants": "./dist/components/button/variants.st.css.js"
   },
   "scripts": {
     "prepare": "npm run build:st-types",
     "start": "webpack serve --open",
     "build": "npm run build:lib && npm run build:demo",
-    "build:lib": "npm run build:stylable && tsc && npm pack",
+    "build:lib": "npm run build:stylable && tsc",
     "build:demo": "webpack --mode production",
     "build:stylable": "stc --config ./stylable.config.build.cjs",
     "build:st-types": "stc --config ./stylable.config.cjs"

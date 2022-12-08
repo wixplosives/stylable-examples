@@ -1,4 +1,4 @@
-@st-import Base, [
+@st-import [
     --border-primary-contrast-1, 
     --color-primary-main, 
     --color-primary-dark, 
@@ -17,7 +17,6 @@
 @st-import Menu from "../components/menu/menu.st.css";
 
 .root {
-    -st-extends: Base;
     --color-primary-main: #1976d2;
     --color-primary-dark: #115293;
     --color-primary-contrast: white;
