@@ -27,6 +27,10 @@ const config = {
             '.mjs': ['.mjs', '.mts'],
         },
         alias: {
+            /* 
+               since we are using a linked library from this monorepo, we want to dedupe it's dependencies.
+               this is a workaround to make sure we pick up the current library's node_modules and not the linked one.
+            */
             ...useLocalPackages(),
         },
     },
