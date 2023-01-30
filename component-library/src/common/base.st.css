@@ -1,0 +1,109 @@
+@st-import [modularScale] from "../../formatters/modular-scale.cjs";
+
+:vars {
+    mobile: "only screen and (max-width: 750px)";
+    desktop: "only screen and (min-width: 750px)";
+}
+
+:root {
+    /* colors */
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-primary-dark: #fafafa;
+    --color-primary-main: #fff;
+    --color-primary-light: #fff;
+    --color-primary-contrast: #000;
+
+    --color-secondary-dark: #f0f0f0;
+    --color-secondary-main: #fff;
+    --color-secondary-light: #fff;
+    --color-secondary-contrast: #000;
+
+    --color-success-dark: #fff;
+    --color-success-main: #fff;
+    --color-success-light: #fff;
+    --color-success-contrast: #000;
+
+    /* borders */
+    --border-primary-contrast-1: 1px solid var(--color-primary-contrast);
+    --border-secondary-contrast-1: 1px solid var(--color-secondary-contrast);
+
+    /* shadows */
+    --shadow-1: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    --shadow-2: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    /* border-radius */
+    --border-radius-1: 3px;
+    --border-radius-2: 6px;
+
+    /* typography */
+    --font-family-primary: Caudex, serif;
+    --font-family-secondary: Prompt, sans-serif;
+    --font-xs: 10px;
+    --font-s: 12px;
+    --font-m: 14px;
+    --font-l: 16px;
+    --font-xl: 18px;
+    --font-xxl: 24px;
+}
+
+@st-scope * {
+
+    /* simple reset */
+    html,
+    body {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        color: inherit;
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 1.05rem 0 1.05rem;
+        line-height: 1.25;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: modularScale(4);
+    }
+
+    h2 {
+        font-size: modularScale(3);
+    }
+
+    h3 {
+        font-size: modularScale(2);
+    }
+
+    h4 {
+        font-size: modularScale(1);
+    }
+
+    h5 {
+        font-size: modularScale(0);
+    }
+
+    h6 {
+        font-size: modularScale(-1);
+    }
+
+    p {
+        font-size: modularScale(0);
+    }
+}

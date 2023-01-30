@@ -1,32 +1,58 @@
 // @ts-check
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
-const path = require('path');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { StylableWebpackPlugin } from '@stylable/webpack-plugin';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+const context = path.dirname(fileURLToPath(import.meta.url));
 /** @type import('webpack').Configuration */
-module.exports = {
+export default {
     mode: 'development',
     devtool: 'source-map',
-    context: __dirname,
+    context,
     entry: {
-        main: require.resolve('./dist/demo.js'),
+        main: path.join(context, './src/demo/demo.tsx'),
     },
     output: {
-        path: path.join(__dirname, 'dist-demo'),
+        path: path.join(context, 'dist-demo'),
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js'],
+        extensionAlias: {
+            '.js': ['.ts', '.tsx', '.js'],
+            '.cjs': ['.cts', '.cjs'],
+            '.mjs': ['.mts', '.mjs'],
+        },
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                enforce: 'pre',
-                loader: 'source-map-loader',
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif|svg)$/,
-                type: 'asset',
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'swc-loader',
+                    options: {
+                        jsc: {
+                            transform: {
+                                react: {
+                                    runtime: 'automatic',
+                                },
+                            },
+                            parser: {
+                                syntax: 'typescript',
+                            },
+                        },
+                    },
+                },
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin(), new StylableWebpackPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new StylableWebpackPlugin({
+            depthStrategy: 'css',
+            stcConfig: path.join(context, './stylable.config.cjs'),
+        }),
+    ],
 };

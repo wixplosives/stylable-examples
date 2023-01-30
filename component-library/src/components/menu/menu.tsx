@@ -1,5 +1,5 @@
 import React from 'react';
-import { st, classes } from './menu.st.css';
+import { st, classes } from './menu.st.css.js';
 
 export interface MenuItem {
     title: string;
@@ -7,20 +7,20 @@ export interface MenuItem {
 }
 
 export interface MenuProps {
-    menuItems: MenuItem[];
+    items: MenuItem[];
     layout: 'horizontal' | 'vertical';
     className?: string;
 }
 
 export const Menu = React.memo(function Menu(props: MenuProps) {
-    const { menuItems = [], layout, className } = props;
+    const { items = [], layout, className } = props;
 
     return (
         <div className={st(classes.root, { layout }, className)}>
-            {menuItems.map((menuItem, index) => {
+            {items.map((item, index) => {
                 return (
-                    <a key={index} className={classes.menuItem} href={menuItem.url}>
-                        {menuItem.title}
+                    <a key={index} className={classes.item} href={item.url}>
+                        {item.title}
                     </a>
                 );
             })}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { style, classes, vars } from './image-view.st.css';
+import { style, classes, vars } from './image-view.st.css.js';
 
 export interface ImageViewProps extends React.ImgHTMLAttributes<HTMLImageElement> {
     resizeMode?: 'fill' | 'cover' | 'contain';

@@ -3,7 +3,7 @@
     --color-primary-dark, 
     --color-primary-contrast, 
     --border-primary-contrast-1
-] from "../../common/project.st.css";
+] from "../../common/base.st.css";
 
 .root {
     display: flex;

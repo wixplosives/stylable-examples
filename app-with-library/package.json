@@ -1,0 +1,42 @@
+{
+  "name": "app-with-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wixplosives/stylable-examples.git",
+  "author": "Wix.com",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "npm run build:app",
+    "build:app": "webpack --mode production"
+  },
+  "dependencies": {
+    "component-library": "file:../component-library",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@stylable/cli": "^5.5.0",
+    "@stylable/webpack-plugin": "^5.5.0",
+    "@types/node": "16",
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^4.0.1",
+    "swc-loader": "^0.2.3",
+    "typescript": "~4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

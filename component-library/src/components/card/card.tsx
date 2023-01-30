@@ -1,5 +1,5 @@
-import React from 'react';
-import { st, classes } from './card.st.css';
+import type React from 'react';
+import { st, classes } from './card.st.css.js';
 
 export function Card({ className, children, ...attrs }: React.HTMLAttributes<HTMLDivElement>) {
     return (
