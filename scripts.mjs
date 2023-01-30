@@ -32,6 +32,7 @@ const operations = {
   build: () => operateOnEach(projectsBuildOrder, build),
   unlock: () => operateOnEach(projectsBuildOrder, unlock),
   clean: () => operateOnEach(projectsBuildOrder, clean),
+  upgrade: () => operateOnEach(projectsBuildOrder, upgrade),
 };
 
 for (const command of commands) {
@@ -61,6 +62,10 @@ function ci(project) {
 
 function build(project) {
   execSync(`npm run build`, { cwd: project, stdio: 'inherit' });
+}
+
+function upgrade(project) {
+  execSync(`npx pleb upgrade`, { cwd: project, stdio: 'inherit' });
 }
 
 function unlock(project) {
