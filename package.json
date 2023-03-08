@@ -5,6 +5,7 @@
   "description": "[![Build Status](https://github.com/wixplosives/stylable-examples/workflows/tests/badge.svg)](https://github.com/wixplosives/stylable-examples/actions)",
   "main": "index.js",
   "scripts": {
+    "upgrade": "node scripts.mjs upgrade",
     "test": "node scripts.mjs clean+install+build",
     "build": "node scripts.mjs build",
     "install": "node scripts.mjs install"
