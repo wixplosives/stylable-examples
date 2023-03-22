@@ -1,4 +1,4 @@
-import { ChangeEvent, useLayoutEffect, useState } from 'react';
+import { type ChangeEvent, useLayoutEffect, useState } from 'react';
 import { classes } from './theme-selector.st.css.js';
 
 function changeTheme<T extends Record<string, string[]>>(themes: T, name: keyof T) {
